@@ -1,0 +1,5714 @@
+{
+    "instruments": [
+        {
+            "instId": "BTC-USDT",
+            "baseCcy": "BTC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.1",
+            "lotSz": "0.00000001",
+            "minSz": "0.00001",
+            "state": "live"
+        },
+        {
+            "instId": "ETH-USDT",
+            "baseCcy": "ETH",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "OKB-USDT",
+            "baseCcy": "OKB",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OKT-USDT",
+            "baseCcy": "OKT",
+            "quoteCcy": "USDT",
+            "listTime": 1611012701000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LTC-USDT",
+            "baseCcy": "LTC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DOT-USDT",
+            "baseCcy": "DOT",
+            "quoteCcy": "USDT",
+            "listTime": 1598061640000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DOGE-USDT",
+            "baseCcy": "DOGE",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SOL-USDT",
+            "baseCcy": "SOL",
+            "quoteCcy": "USDT",
+            "listTime": 1601431200000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "PEPE-USDT",
+            "baseCcy": "PEPE",
+            "quoteCcy": "USDT",
+            "listTime": 1682914523000,
+            "tickSz": "0.0000000001",
+            "lotSz": "1",
+            "minSz": "1000000",
+            "state": "live"
+        },
+        {
+            "instId": "AIDOGE-USDT",
+            "baseCcy": "AIDOGE",
+            "quoteCcy": "USDT",
+            "listTime": 1682391770000,
+            "tickSz": "0.000000000001",
+            "lotSz": "1",
+            "minSz": "10000000000",
+            "state": "live"
+        },
+        {
+            "instId": "FIL-USDT",
+            "baseCcy": "FIL",
+            "quoteCcy": "USDT",
+            "listTime": 1606946433000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "SUI-USDT",
+            "baseCcy": "SUI",
+            "quoteCcy": "USDT",
+            "listTime": 1683081975000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CETUS-USDT",
+            "baseCcy": "CETUS",
+            "quoteCcy": "USDT",
+            "listTime": 1683708147000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "1INCH-USDT",
+            "baseCcy": "1INCH",
+            "quoteCcy": "USDT",
+            "listTime": 1608830100000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AAVE-USDT",
+            "baseCcy": "AAVE",
+            "quoteCcy": "USDT",
+            "listTime": 1603317639000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ACA-USDT",
+            "baseCcy": "ACA",
+            "quoteCcy": "USDT",
+            "listTime": 1643100129000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ACH-USDT",
+            "baseCcy": "ACH",
+            "quoteCcy": "USDT",
+            "listTime": 1682050337000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "ADA-USDT",
+            "baseCcy": "ADA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "AERGO-USDT",
+            "baseCcy": "AERGO",
+            "quoteCcy": "USDT",
+            "listTime": 1595456951000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "AGLD-USDT",
+            "baseCcy": "AGLD",
+            "quoteCcy": "USDT",
+            "listTime": 1630654581000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "AKITA-USDT",
+            "baseCcy": "AKITA",
+            "quoteCcy": "USDT",
+            "listTime": 1620979264000,
+            "tickSz": "0.0000000001",
+            "lotSz": "1",
+            "minSz": "1000000",
+            "state": "live"
+        },
+        {
+            "instId": "ALCX-USDT",
+            "baseCcy": "ALCX",
+            "quoteCcy": "USDT",
+            "listTime": 1637910537000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ALGO-USDT",
+            "baseCcy": "ALGO",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ALPHA-USDT",
+            "baseCcy": "ALPHA",
+            "quoteCcy": "USDT",
+            "listTime": 1614834000000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ANC-USDT",
+            "baseCcy": "ANC",
+            "quoteCcy": "USDT",
+            "listTime": 1615950000000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ANT-USDT",
+            "baseCcy": "ANT",
+            "quoteCcy": "USDT",
+            "listTime": 1597255081000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "APE-USDT",
+            "baseCcy": "APE",
+            "quoteCcy": "USDT",
+            "listTime": 1647508809000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "APIX-USDT",
+            "baseCcy": "APIX",
+            "quoteCcy": "USDT",
+            "listTime": 1594261802000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "API3-USDT",
+            "baseCcy": "API3",
+            "quoteCcy": "USDT",
+            "listTime": 1607464841000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "APM-USDT",
+            "baseCcy": "APM",
+            "quoteCcy": "USDT",
+            "listTime": 1582320712000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "APT-USDT",
+            "baseCcy": "APT",
+            "quoteCcy": "USDT",
+            "listTime": 1666141200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AR-USDT",
+            "baseCcy": "AR",
+            "quoteCcy": "USDT",
+            "listTime": 1640315756000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ARB-USDT",
+            "baseCcy": "ARB",
+            "quoteCcy": "USDT",
+            "listTime": 1679575630000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ARG-USDT",
+            "baseCcy": "ARG",
+            "quoteCcy": "USDT",
+            "listTime": 1663915767000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "AST-USDT",
+            "baseCcy": "AST",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ASTR-USDT",
+            "baseCcy": "ASTR",
+            "quoteCcy": "USDT",
+            "listTime": 1642405602000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ATOM-USDT",
+            "baseCcy": "ATOM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AUCTION-USDT",
+            "baseCcy": "AUCTION",
+            "quoteCcy": "USDT",
+            "listTime": 1617793135000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "AVAX-USDT",
+            "baseCcy": "AVAX",
+            "quoteCcy": "USDT",
+            "listTime": 1600734600000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "AXS-USDT",
+            "baseCcy": "AXS",
+            "quoteCcy": "USDT",
+            "listTime": 1627376400000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "AZY-USDT",
+            "baseCcy": "AZY",
+            "quoteCcy": "USDT",
+            "listTime": 1658473539000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BABYDOGE-USDT",
+            "baseCcy": "BABYDOGE",
+            "quoteCcy": "USDT",
+            "listTime": 1628583250000,
+            "tickSz": "0.000000000001",
+            "lotSz": "1",
+            "minSz": "1000000000",
+            "state": "live"
+        },
+        {
+            "instId": "BADGER-USDT",
+            "baseCcy": "BADGER",
+            "quoteCcy": "USDT",
+            "listTime": 1610395200000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BAL-USDT",
+            "baseCcy": "BAL",
+            "quoteCcy": "USDT",
+            "listTime": 1595786209000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BAND-USDT",
+            "baseCcy": "BAND",
+            "quoteCcy": "USDT",
+            "listTime": 1598569200000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "BAT-USDT",
+            "baseCcy": "BAT",
+            "quoteCcy": "USDT",
+            "listTime": 1583197200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BCD-USDT",
+            "baseCcy": "BCD",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BCH-USDT",
+            "baseCcy": "BCH",
+            "quoteCcy": "USDT",
+            "listTime": 1605477603000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "BETH-USDT",
+            "baseCcy": "BETH",
+            "quoteCcy": "USDT",
+            "listTime": 1608678000000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "BICO-USDT",
+            "baseCcy": "BICO",
+            "quoteCcy": "USDT",
+            "listTime": 1638350839000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BLOK-USDT",
+            "baseCcy": "BLOK",
+            "quoteCcy": "USDT",
+            "listTime": 1637293123000,
+            "tickSz": "0.000001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BLUR-USDT",
+            "baseCcy": "BLUR",
+            "quoteCcy": "USDT",
+            "listTime": 1676356510000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BNB-USDT",
+            "baseCcy": "BNB",
+            "quoteCcy": "USDT",
+            "listTime": 1671540758000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BNT-USDT",
+            "baseCcy": "BNT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "BONE-USDT",
+            "baseCcy": "BONE",
+            "quoteCcy": "USDT",
+            "listTime": 1682394247000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BORING-USDT",
+            "baseCcy": "BORING",
+            "quoteCcy": "USDT",
+            "listTime": 1637813826000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BORA-USDT",
+            "baseCcy": "BORA",
+            "quoteCcy": "USDT",
+            "listTime": 1648624377000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BRWL-USDT",
+            "baseCcy": "BRWL",
+            "quoteCcy": "USDT",
+            "listTime": 1648624503000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BSV-USDT",
+            "baseCcy": "BSV",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BTM-USDT",
+            "baseCcy": "BTM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BTT-USDT",
+            "baseCcy": "BTT",
+            "quoteCcy": "USDT",
+            "listTime": 1643262023000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "1000000",
+            "state": "live"
+        },
+        {
+            "instId": "BZZ-USDT",
+            "baseCcy": "BZZ",
+            "quoteCcy": "USDT",
+            "listTime": 1624288513000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CEEK-USDT",
+            "baseCcy": "CEEK",
+            "quoteCcy": "USDT",
+            "listTime": 1667199159000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CELO-USDT",
+            "baseCcy": "CELO",
+            "quoteCcy": "USDT",
+            "listTime": 1594939857000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CEL-USDT",
+            "baseCcy": "CEL",
+            "quoteCcy": "USDT",
+            "listTime": 1618290083000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "CELR-USDT",
+            "baseCcy": "CELR",
+            "quoteCcy": "USDT",
+            "listTime": 1617008400000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CFG-USDT",
+            "baseCcy": "CFG",
+            "quoteCcy": "USDT",
+            "listTime": 1626310800000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CFX-USDT",
+            "baseCcy": "CFX",
+            "quoteCcy": "USDT",
+            "listTime": 1614718800000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CGL-USDT",
+            "baseCcy": "CGL",
+            "quoteCcy": "USDT",
+            "listTime": 1677473988000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "CHE-USDT",
+            "baseCcy": "CHE",
+            "quoteCcy": "USDT",
+            "listTime": 1632380102000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CHZ-USDT",
+            "baseCcy": "CHZ",
+            "quoteCcy": "USDT",
+            "listTime": 1614754800000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CITY-USDT",
+            "baseCcy": "CITY",
+            "quoteCcy": "USDT",
+            "listTime": 1664176306000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CLV-USDT",
+            "baseCcy": "CLV",
+            "quoteCcy": "USDT",
+            "listTime": 1627534800000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "COMP-USDT",
+            "baseCcy": "COMP",
+            "quoteCcy": "USDT",
+            "listTime": 1593379982000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "CONV-USDT",
+            "baseCcy": "CONV",
+            "quoteCcy": "USDT",
+            "listTime": 1616679900000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CORE-USDT",
+            "baseCcy": "CORE",
+            "quoteCcy": "USDT",
+            "listTime": 1675836959000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "COVER-USDT",
+            "baseCcy": "COVER",
+            "quoteCcy": "USDT",
+            "listTime": 1610424000000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "CQT-USDT",
+            "baseCcy": "CQT",
+            "quoteCcy": "USDT",
+            "listTime": 1624410000000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CRO-USDT",
+            "baseCcy": "CRO",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CRV-USDT",
+            "baseCcy": "CRV",
+            "quoteCcy": "USDT",
+            "listTime": 1597346595000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CSPR-USDT",
+            "baseCcy": "CSPR",
+            "quoteCcy": "USDT",
+            "listTime": 1620730802000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CTC-USDT",
+            "baseCcy": "CTC",
+            "quoteCcy": "USDT",
+            "listTime": 1586478421000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "CTXC-USDT",
+            "baseCcy": "CTXC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CVC-USDT",
+            "baseCcy": "CVC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CVP-USDT",
+            "baseCcy": "CVP",
+            "quoteCcy": "USDT",
+            "listTime": 1598920205000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CVX-USDT",
+            "baseCcy": "CVX",
+            "quoteCcy": "USDT",
+            "listTime": 1637910537000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DAI-USDT",
+            "baseCcy": "DAI",
+            "quoteCcy": "USDT",
+            "listTime": 1576623628000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DAO-USDT",
+            "baseCcy": "DAO",
+            "quoteCcy": "USDT",
+            "listTime": 1618395998000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DASH-USDT",
+            "baseCcy": "DASH",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DCR-USDT",
+            "baseCcy": "DCR",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.00000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DEP-USDT",
+            "baseCcy": "DEP",
+            "quoteCcy": "USDT",
+            "listTime": 1586296999000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "DGB-USDT",
+            "baseCcy": "DGB",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "DHT-USDT",
+            "baseCcy": "DHT",
+            "quoteCcy": "USDT",
+            "listTime": 1600308300000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DIA-USDT",
+            "baseCcy": "DIA",
+            "quoteCcy": "USDT",
+            "listTime": 1597723200000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DMD-USDT",
+            "baseCcy": "DMD",
+            "quoteCcy": "USDT",
+            "listTime": 1600974035000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DOME-USDT",
+            "baseCcy": "DOME",
+            "quoteCcy": "USDT",
+            "listTime": 1644289751000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "DORA-USDT",
+            "baseCcy": "DORA",
+            "quoteCcy": "USDT",
+            "listTime": 1616461210000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DOSE-USDT",
+            "baseCcy": "DOSE",
+            "quoteCcy": "USDT",
+            "listTime": 1635930855000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "DYDX-USDT",
+            "baseCcy": "DYDX",
+            "quoteCcy": "USDT",
+            "listTime": 1631096475000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EC-USDT",
+            "baseCcy": "EC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "1000",
+            "state": "live"
+        },
+        {
+            "instId": "EDEN-USDT",
+            "baseCcy": "EDEN",
+            "quoteCcy": "USDT",
+            "listTime": 1631260728000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "EFI-USDT",
+            "baseCcy": "EFI",
+            "quoteCcy": "USDT",
+            "listTime": 1628067557000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "EGLD-USDT",
+            "baseCcy": "EGLD",
+            "quoteCcy": "USDT",
+            "listTime": 1601425800000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "EGT-USDT",
+            "baseCcy": "EGT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "ELF-USDT",
+            "baseCcy": "ELF",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ELON-USDT",
+            "baseCcy": "ELON",
+            "quoteCcy": "USDT",
+            "listTime": 1635146385000,
+            "tickSz": "0.0000000001",
+            "lotSz": "1",
+            "minSz": "5000000",
+            "state": "live"
+        },
+        {
+            "instId": "ELT-USDT",
+            "baseCcy": "ELT",
+            "quoteCcy": "USDT",
+            "listTime": 1650434950000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "EM-USDT",
+            "baseCcy": "EM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "ENJ-USDT",
+            "baseCcy": "ENJ",
+            "quoteCcy": "USDT",
+            "listTime": 1616029200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ENS-USDT",
+            "baseCcy": "ENS",
+            "quoteCcy": "USDT",
+            "listTime": 1636418921000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EOS-USDT",
+            "baseCcy": "EOS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ERN-USDT",
+            "baseCcy": "ERN",
+            "quoteCcy": "USDT",
+            "listTime": 1629699284000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETC-USDT",
+            "baseCcy": "ETC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETHW-USDT",
+            "baseCcy": "ETHW",
+            "quoteCcy": "USDT",
+            "listTime": 1663258755000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EURT-USDT",
+            "baseCcy": "EURT",
+            "quoteCcy": "USDT",
+            "listTime": 1658201420000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FAME-USDT",
+            "baseCcy": "FAME",
+            "quoteCcy": "USDT",
+            "listTime": 1651214865000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "FITFI-USDT",
+            "baseCcy": "FITFI",
+            "quoteCcy": "USDT",
+            "listTime": 1650948023000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FLM-USDT",
+            "baseCcy": "FLM",
+            "quoteCcy": "USDT",
+            "listTime": 1601247097000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FLOW-USDT",
+            "baseCcy": "FLOW",
+            "quoteCcy": "USDT",
+            "listTime": 1614027600000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "FLOKI-USDT",
+            "baseCcy": "FLOKI",
+            "quoteCcy": "USDT",
+            "listTime": 1671172201000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "100000",
+            "state": "live"
+        },
+        {
+            "instId": "FLR-USDT",
+            "baseCcy": "FLR",
+            "quoteCcy": "USDT",
+            "listTime": 1673256334000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "FODL-USDT",
+            "baseCcy": "FODL",
+            "quoteCcy": "USDT",
+            "listTime": 1634887190000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FORTH-USDT",
+            "baseCcy": "FORTH",
+            "quoteCcy": "USDT",
+            "listTime": 1619067551000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "FRONT-USDT",
+            "baseCcy": "FRONT",
+            "quoteCcy": "USDT",
+            "listTime": 1600144020000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FSN-USDT",
+            "baseCcy": "FSN",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FTM-USDT",
+            "baseCcy": "FTM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GALA-USDT",
+            "baseCcy": "GALA",
+            "quoteCcy": "USDT",
+            "listTime": 1632295327000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "GALFT-USDT",
+            "baseCcy": "GALFT",
+            "quoteCcy": "USDT",
+            "listTime": 1655962540000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GAL-USDT",
+            "baseCcy": "GAL",
+            "quoteCcy": "USDT",
+            "listTime": 1681960918000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GARI-USDT",
+            "baseCcy": "GARI",
+            "quoteCcy": "USDT",
+            "listTime": 1642487484000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GAS-USDT",
+            "baseCcy": "GAS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "GEAR-USDT",
+            "baseCcy": "GEAR",
+            "quoteCcy": "USDT",
+            "listTime": 1671766215000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "GF-USDT",
+            "baseCcy": "GF",
+            "quoteCcy": "USDT",
+            "listTime": 1638946096000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GFT-USDT",
+            "baseCcy": "GFT",
+            "quoteCcy": "USDT",
+            "listTime": 1675865168000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "GHST-USDT",
+            "baseCcy": "GHST",
+            "quoteCcy": "USDT",
+            "listTime": 1602561620000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GLM-USDT",
+            "baseCcy": "GLM",
+            "quoteCcy": "USDT",
+            "listTime": 1613696440000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GLMR-USDT",
+            "baseCcy": "GLMR",
+            "quoteCcy": "USDT",
+            "listTime": 1641883794000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GM-USDT",
+            "baseCcy": "GM",
+            "quoteCcy": "USDT",
+            "listTime": 1636691819000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "GMT-USDT",
+            "baseCcy": "GMT",
+            "quoteCcy": "USDT",
+            "listTime": 1648782263000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GMX-USDT",
+            "baseCcy": "GMX",
+            "quoteCcy": "USDT",
+            "listTime": 1672900108000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "GOAL-USDT",
+            "baseCcy": "GOAL",
+            "quoteCcy": "USDT",
+            "listTime": 1677471373000,
+            "tickSz": "0.0001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "GODS-USDT",
+            "baseCcy": "GODS",
+            "quoteCcy": "USDT",
+            "listTime": 1635493317000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GOG-USDT",
+            "baseCcy": "GOG",
+            "quoteCcy": "USDT",
+            "listTime": 1640083218000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GRT-USDT",
+            "baseCcy": "GRT",
+            "quoteCcy": "USDT",
+            "listTime": 1608242400000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "HBAR-USDT",
+            "baseCcy": "HBAR",
+            "quoteCcy": "USDT",
+            "listTime": 1568679563000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "HC-USDT",
+            "baseCcy": "HC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "HEGIC-USDT",
+            "baseCcy": "HEGIC",
+            "quoteCcy": "USDT",
+            "listTime": 1607464828000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "HNT-USDT",
+            "baseCcy": "HNT",
+            "quoteCcy": "USDT",
+            "listTime": 1668398132000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ICP-USDT",
+            "baseCcy": "ICP",
+            "quoteCcy": "USDT",
+            "listTime": 1620662449000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ICX-USDT",
+            "baseCcy": "ICX",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ID-USDT",
+            "baseCcy": "ID",
+            "quoteCcy": "USDT",
+            "listTime": 1681960918000,
+            "tickSz": "0.0001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "IGU-USDT",
+            "baseCcy": "IGU",
+            "quoteCcy": "USDT",
+            "listTime": 1676528843000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ILV-USDT",
+            "baseCcy": "ILV",
+            "quoteCcy": "USDT",
+            "listTime": 1630986413000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "IMX-USDT",
+            "baseCcy": "IMX",
+            "quoteCcy": "USDT",
+            "listTime": 1604565813000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "INT-USDT",
+            "baseCcy": "INT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "IOST-USDT",
+            "baseCcy": "IOST",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "IOTA-USDT",
+            "baseCcy": "IOTA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "IQ-USDT",
+            "baseCcy": "IQ",
+            "quoteCcy": "USDT",
+            "listTime": 1592447930000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "JFI-USDT",
+            "baseCcy": "JFI",
+            "quoteCcy": "USDT",
+            "listTime": 1599433200000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "JOE-USDT",
+            "baseCcy": "JOE",
+            "quoteCcy": "USDT",
+            "listTime": 1644379504000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "JST-USDT",
+            "baseCcy": "JST",
+            "quoteCcy": "USDT",
+            "listTime": 1598569232000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "KAN-USDT",
+            "baseCcy": "KAN",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "KAR-USDT",
+            "baseCcy": "KAR",
+            "quoteCcy": "USDT",
+            "listTime": 1626782400000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KCASH-USDT",
+            "baseCcy": "KCASH",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "KCAL-USDT",
+            "baseCcy": "KCAL",
+            "quoteCcy": "USDT",
+            "listTime": 1668139781000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KDA-USDT",
+            "baseCcy": "KDA",
+            "quoteCcy": "USDT",
+            "listTime": 1641352621000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "KINE-USDT",
+            "baseCcy": "KINE",
+            "quoteCcy": "USDT",
+            "listTime": 1615755600000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KISHU-USDT",
+            "baseCcy": "KISHU",
+            "quoteCcy": "USDT",
+            "listTime": 1620979258000,
+            "tickSz": "0.000000000001",
+            "lotSz": "1",
+            "minSz": "100000000",
+            "state": "live"
+        },
+        {
+            "instId": "KLAY-USDT",
+            "baseCcy": "KLAY",
+            "quoteCcy": "USDT",
+            "listTime": 1599703200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KNC-USDT",
+            "baseCcy": "KNC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KOL-USDT",
+            "baseCcy": "KOL",
+            "quoteCcy": "USDT",
+            "listTime": 1632812798000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KONO-USDT",
+            "baseCcy": "KONO",
+            "quoteCcy": "USDT",
+            "listTime": 1617699615000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KP3R-USDT",
+            "baseCcy": "KP3R",
+            "quoteCcy": "USDT",
+            "listTime": 1607464835000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "KSM-USDT",
+            "baseCcy": "KSM",
+            "quoteCcy": "USDT",
+            "listTime": 1599001235000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LAMB-USDT",
+            "baseCcy": "LAMB",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "LAT-USDT",
+            "baseCcy": "LAT",
+            "quoteCcy": "USDT",
+            "listTime": 1620791102000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "LDN-USDT",
+            "baseCcy": "LDN",
+            "quoteCcy": "USDT",
+            "listTime": 1643358797000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LDO-USDT",
+            "baseCcy": "LDO",
+            "quoteCcy": "USDT",
+            "listTime": 1662085641000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LEASH-USDT",
+            "baseCcy": "LEASH",
+            "quoteCcy": "USDT",
+            "listTime": 1636093910000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "LEO-USDT",
+            "baseCcy": "LEO",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LET-USDT",
+            "baseCcy": "LET",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "LINK-USDT",
+            "baseCcy": "LINK",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LING-USDT",
+            "baseCcy": "LING",
+            "quoteCcy": "USDT",
+            "listTime": 1663052125000,
+            "tickSz": "0.000001",
+            "lotSz": "0.01",
+            "minSz": "500",
+            "state": "live"
+        },
+        {
+            "instId": "LITH-USDT",
+            "baseCcy": "LITH",
+            "quoteCcy": "USDT",
+            "listTime": 1632725817000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "LON-USDT",
+            "baseCcy": "LON",
+            "quoteCcy": "USDT",
+            "listTime": 1608658200000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LOON-USDT",
+            "baseCcy": "LOON",
+            "quoteCcy": "USDT",
+            "listTime": 1607644800000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "LOOKS-USDT",
+            "baseCcy": "LOOKS",
+            "quoteCcy": "USDT",
+            "listTime": 1642063292000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LPT-USDT",
+            "baseCcy": "LPT",
+            "quoteCcy": "USDT",
+            "listTime": 1617354075000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LQTY-USDT",
+            "baseCcy": "LQTY",
+            "quoteCcy": "USDT",
+            "listTime": 1682050337000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LRC-USDT",
+            "baseCcy": "LRC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LSK-USDT",
+            "baseCcy": "LSK",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.00000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LUNC-USDT",
+            "baseCcy": "LUNC",
+            "quoteCcy": "USDT",
+            "listTime": 1653636192000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "LUNA-USDT",
+            "baseCcy": "LUNA",
+            "quoteCcy": "USDT",
+            "listTime": 1653732267000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MAGIC-USDT",
+            "baseCcy": "MAGIC",
+            "quoteCcy": "USDT",
+            "listTime": 1644820923000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MANA-USDT",
+            "baseCcy": "MANA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MASK-USDT",
+            "baseCcy": "MASK",
+            "quoteCcy": "USDT",
+            "listTime": 1614152521000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "MATIC-USDT",
+            "baseCcy": "MATIC",
+            "quoteCcy": "USDT",
+            "listTime": 1617008400000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MCO-USDT",
+            "baseCcy": "MCO",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "MDA-USDT",
+            "baseCcy": "MDA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MDT-USDT",
+            "baseCcy": "MDT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "MENGO-USDT",
+            "baseCcy": "MENGO",
+            "quoteCcy": "USDT",
+            "listTime": 1663915767000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "METIS-USDT",
+            "baseCcy": "METIS",
+            "quoteCcy": "USDT",
+            "listTime": 1644471448000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "MILO-USDT",
+            "baseCcy": "MILO",
+            "quoteCcy": "USDT",
+            "listTime": 1648531576000,
+            "tickSz": "0.00000000001",
+            "lotSz": "1",
+            "minSz": "10000000",
+            "state": "live"
+        },
+        {
+            "instId": "MINA-USDT",
+            "baseCcy": "MINA",
+            "quoteCcy": "USDT",
+            "listTime": 1622508605000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MIR-USDT",
+            "baseCcy": "MIR",
+            "quoteCcy": "USDT",
+            "listTime": 1612431214000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "MITH-USDT",
+            "baseCcy": "MITH",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "MKR-USDT",
+            "baseCcy": "MKR",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.1",
+            "lotSz": "0.00000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "MLN-USDT",
+            "baseCcy": "MLN",
+            "quoteCcy": "USDT",
+            "listTime": 1599778816000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "MOVR-USDT",
+            "baseCcy": "MOVR",
+            "quoteCcy": "USDT",
+            "listTime": 1638946446000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "MOVEZ-USDT",
+            "baseCcy": "MOVEZ",
+            "quoteCcy": "USDT",
+            "listTime": 1654834980000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "MRST-USDT",
+            "baseCcy": "MRST",
+            "quoteCcy": "USDT",
+            "listTime": 1667966214000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "MXC-USDT",
+            "baseCcy": "MXC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "MXT-USDT",
+            "baseCcy": "MXT",
+            "quoteCcy": "USDT",
+            "listTime": 1600983297000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "1000",
+            "state": "live"
+        },
+        {
+            "instId": "MYRIA-USDT",
+            "baseCcy": "MYRIA",
+            "quoteCcy": "USDT",
+            "listTime": 1680757607000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "NEAR-USDT",
+            "baseCcy": "NEAR",
+            "quoteCcy": "USDT",
+            "listTime": 1606946400000,
+            "tickSz": "0.001",
+            "lotSz": "0.00000001",
+            "minSz": "0.5",
+            "state": "live"
+        },
+        {
+            "instId": "NEO-USDT",
+            "baseCcy": "NEO",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "NFT-USDT",
+            "baseCcy": "NFT",
+            "quoteCcy": "USDT",
+            "listTime": 1636612984000,
+            "tickSz": "0.0000000001",
+            "lotSz": "1",
+            "minSz": "1000000",
+            "state": "live"
+        },
+        {
+            "instId": "NMR-USDT",
+            "baseCcy": "NMR",
+            "quoteCcy": "USDT",
+            "listTime": 1599778808000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "NULS-USDT",
+            "baseCcy": "NULS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "NYM-USDT",
+            "baseCcy": "NYM",
+            "quoteCcy": "USDT",
+            "listTime": 1649940999000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OAS-USDT",
+            "baseCcy": "OAS",
+            "quoteCcy": "USDT",
+            "listTime": 1670823117000,
+            "tickSz": "0.000001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "OM-USDT",
+            "baseCcy": "OM",
+            "quoteCcy": "USDT",
+            "listTime": 1598320800000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "OMG-USDT",
+            "baseCcy": "OMG",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OMI-USDT",
+            "baseCcy": "OMI",
+            "quoteCcy": "USDT",
+            "listTime": 1627898400000,
+            "tickSz": "0.000001",
+            "lotSz": "0.001",
+            "minSz": "1000",
+            "state": "live"
+        },
+        {
+            "instId": "ONE-USDT",
+            "baseCcy": "ONE",
+            "quoteCcy": "USDT",
+            "listTime": 1641439173000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ONT-USDT",
+            "baseCcy": "ONT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OP-USDT",
+            "baseCcy": "OP",
+            "quoteCcy": "USDT",
+            "listTime": 1654017130000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ORBS-USDT",
+            "baseCcy": "ORBS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ORB-USDT",
+            "baseCcy": "ORB",
+            "quoteCcy": "USDT",
+            "listTime": 1647842908000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "OXT-USDT",
+            "baseCcy": "OXT",
+            "quoteCcy": "USDT",
+            "listTime": 1585530000000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PCI-USDT",
+            "baseCcy": "PCI",
+            "quoteCcy": "USDT",
+            "listTime": 1648624377000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PEOPLE-USDT",
+            "baseCcy": "PEOPLE",
+            "quoteCcy": "USDT",
+            "listTime": 1637910407000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "PERP-USDT",
+            "baseCcy": "PERP",
+            "quoteCcy": "USDT",
+            "listTime": 1615367068000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "PHA-USDT",
+            "baseCcy": "PHA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PICKLE-USDT",
+            "baseCcy": "PICKLE",
+            "quoteCcy": "USDT",
+            "listTime": 1607464847000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "PIT-USDT",
+            "baseCcy": "PIT",
+            "quoteCcy": "USDT",
+            "listTime": 1648532055000,
+            "tickSz": "0.000000000001",
+            "lotSz": "1",
+            "minSz": "500000000",
+            "state": "live"
+        },
+        {
+            "instId": "PNK-USDT",
+            "baseCcy": "PNK",
+            "quoteCcy": "USDT",
+            "listTime": 1597795200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "POLS-USDT",
+            "baseCcy": "POLS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "POLYDOGE-USDT",
+            "baseCcy": "POLYDOGE",
+            "quoteCcy": "USDT",
+            "listTime": 1636365219000,
+            "tickSz": "0.00000000001",
+            "lotSz": "1",
+            "minSz": "100000000",
+            "state": "live"
+        },
+        {
+            "instId": "POR-USDT",
+            "baseCcy": "POR",
+            "quoteCcy": "USDT",
+            "listTime": 1663915767000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PRQ-USDT",
+            "baseCcy": "PRQ",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PSTAKE-USDT",
+            "baseCcy": "PSTAKE",
+            "quoteCcy": "USDT",
+            "listTime": 1645689409000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "QOM-USDT",
+            "baseCcy": "QOM",
+            "quoteCcy": "USDT",
+            "listTime": 1648532055000,
+            "tickSz": "0.0000000001",
+            "lotSz": "1",
+            "minSz": "10000000",
+            "state": "live"
+        },
+        {
+            "instId": "QTUM-USDT",
+            "baseCcy": "QTUM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "RACA-USDT",
+            "baseCcy": "RACA",
+            "quoteCcy": "USDT",
+            "listTime": 1638857971000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.001",
+            "minSz": "1000",
+            "state": "live"
+        },
+        {
+            "instId": "RADAR-USDT",
+            "baseCcy": "RADAR",
+            "quoteCcy": "USDT",
+            "listTime": 1677038978000,
+            "tickSz": "0.00001",
+            "lotSz": "0.001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "RAY-USDT",
+            "baseCcy": "RAY",
+            "quoteCcy": "USDT",
+            "listTime": 1639723800000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "RDNT-USDT",
+            "baseCcy": "RDNT",
+            "quoteCcy": "USDT",
+            "listTime": 1679379214000,
+            "tickSz": "0.0001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "REN-USDT",
+            "baseCcy": "REN",
+            "quoteCcy": "USDT",
+            "listTime": 1598569247000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "REP-USDT",
+            "baseCcy": "REP",
+            "quoteCcy": "USDT",
+            "listTime": 1599778800000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "REVV-USDT",
+            "baseCcy": "REVV",
+            "quoteCcy": "USDT",
+            "listTime": 1629873979000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "RFUEL-USDT",
+            "baseCcy": "RFUEL",
+            "quoteCcy": "USDT",
+            "listTime": 1601254800000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "5",
+            "state": "live"
+        },
+        {
+            "instId": "RIO-USDT",
+            "baseCcy": "RIO",
+            "quoteCcy": "USDT",
+            "listTime": 1600216218000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "RON-USDT",
+            "baseCcy": "RON",
+            "quoteCcy": "USDT",
+            "listTime": 1643289707000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "RPL-USDT",
+            "baseCcy": "RPL",
+            "quoteCcy": "USDT",
+            "listTime": 1677659381000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "RSR-USDT",
+            "baseCcy": "RSR",
+            "quoteCcy": "USDT",
+            "listTime": 1598569278000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "RSS3-USDT",
+            "baseCcy": "RSS3",
+            "quoteCcy": "USDT",
+            "listTime": 1644810506000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "RVN-USDT",
+            "baseCcy": "RVN",
+            "quoteCcy": "USDT",
+            "listTime": 1582074000000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SAITAMA-USDT",
+            "baseCcy": "SAITAMA",
+            "quoteCcy": "USDT",
+            "listTime": 1655264502000,
+            "tickSz": "0.000001",
+            "lotSz": "0.01",
+            "minSz": "1000",
+            "state": "live"
+        },
+        {
+            "instId": "SAMO-USDT",
+            "baseCcy": "SAMO",
+            "quoteCcy": "USDT",
+            "listTime": 1636093834000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SAND-USDT",
+            "baseCcy": "SAND",
+            "quoteCcy": "USDT",
+            "listTime": 1616029200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SC-USDT",
+            "baseCcy": "SC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "SD-USDT",
+            "baseCcy": "SD",
+            "quoteCcy": "USDT",
+            "listTime": 1647338743000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SHIB-USDT",
+            "baseCcy": "SHIB",
+            "quoteCcy": "USDT",
+            "listTime": 1620452410000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "50000",
+            "state": "live"
+        },
+        {
+            "instId": "SIS-USDT",
+            "baseCcy": "SIS",
+            "quoteCcy": "USDT",
+            "listTime": 1639638238000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SKEB-USDT",
+            "baseCcy": "SKEB",
+            "quoteCcy": "USDT",
+            "listTime": 1662607568000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.01",
+            "minSz": "500",
+            "state": "live"
+        },
+        {
+            "instId": "SKL-USDT",
+            "baseCcy": "SKL",
+            "quoteCcy": "USDT",
+            "listTime": 1617008400000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SLP-USDT",
+            "baseCcy": "SLP",
+            "quoteCcy": "USDT",
+            "listTime": 1629354835000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SNT-USDT",
+            "baseCcy": "SNT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SNX-USDT",
+            "baseCcy": "SNX",
+            "quoteCcy": "USDT",
+            "listTime": 1595543578000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SOS-USDT",
+            "baseCcy": "SOS",
+            "quoteCcy": "USDT",
+            "listTime": 1640427125000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "1000000",
+            "state": "live"
+        },
+        {
+            "instId": "SPELL-USDT",
+            "baseCcy": "SPELL",
+            "quoteCcy": "USDT",
+            "listTime": 1634282681000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "SRM-USDT",
+            "baseCcy": "SRM",
+            "quoteCcy": "USDT",
+            "listTime": 1597352407000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SSV-USDT",
+            "baseCcy": "SSV",
+            "quoteCcy": "USDT",
+            "listTime": 1677659155000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "STARL-USDT",
+            "baseCcy": "STARL",
+            "quoteCcy": "USDT",
+            "listTime": 1635146385000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "100000",
+            "state": "live"
+        },
+        {
+            "instId": "STC-USDT",
+            "baseCcy": "STC",
+            "quoteCcy": "USDT",
+            "listTime": 1661149481000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "STORJ-USDT",
+            "baseCcy": "STORJ",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "STRK-USDT",
+            "baseCcy": "STRK",
+            "quoteCcy": "USDT",
+            "listTime": 1620810020000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "STX-USDT",
+            "baseCcy": "STX",
+            "quoteCcy": "USDT",
+            "listTime": 1614852010000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SUN-USDT",
+            "baseCcy": "SUN",
+            "quoteCcy": "USDT",
+            "listTime": 1625468400000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "SUSHI-USDT",
+            "baseCcy": "SUSHI",
+            "quoteCcy": "USDT",
+            "listTime": 1598919600000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SWEAT-USDT",
+            "baseCcy": "SWEAT",
+            "quoteCcy": "USDT",
+            "listTime": 1663052031000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.01",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SWFTC-USDT",
+            "baseCcy": "SWFTC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "SWRV-USDT",
+            "baseCcy": "SWRV",
+            "quoteCcy": "USDT",
+            "listTime": 1599681629000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "T-USDT",
+            "baseCcy": "T",
+            "quoteCcy": "USDT",
+            "listTime": 1617163770000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "TAI-USDT",
+            "baseCcy": "TAI",
+            "quoteCcy": "USDT",
+            "listTime": 1599433207000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TAKI-USDT",
+            "baseCcy": "TAKI",
+            "quoteCcy": "USDT",
+            "listTime": 1651125446000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "TAMA-USDT",
+            "baseCcy": "TAMA",
+            "quoteCcy": "USDT",
+            "listTime": 1664264522000,
+            "tickSz": "0.000001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "TCT-USDT",
+            "baseCcy": "TCT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "THETA-USDT",
+            "baseCcy": "THETA",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "THG-USDT",
+            "baseCcy": "THG",
+            "quoteCcy": "USDT",
+            "listTime": 1639984183000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TON-USDT",
+            "baseCcy": "TON",
+            "quoteCcy": "USDT",
+            "listTime": 1651204987000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TOWN-USDT",
+            "baseCcy": "TOWN",
+            "quoteCcy": "USDT",
+            "listTime": 1637167064000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TRA-USDT",
+            "baseCcy": "TRA",
+            "quoteCcy": "USDT",
+            "listTime": 1617966991000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TRB-USDT",
+            "baseCcy": "TRB",
+            "quoteCcy": "USDT",
+            "listTime": 1598569262000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "TRUE-USDT",
+            "baseCcy": "TRUE",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "TRX-USDT",
+            "baseCcy": "TRX",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "TUP-USDT",
+            "baseCcy": "TUP",
+            "quoteCcy": "USDT",
+            "listTime": 1601448516000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "UMA-USDT",
+            "baseCcy": "UMA",
+            "quoteCcy": "USDT",
+            "listTime": 1598828400000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "UMEE-USDT",
+            "baseCcy": "UMEE",
+            "quoteCcy": "USDT",
+            "listTime": 1645000012000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "UNI-USDT",
+            "baseCcy": "UNI",
+            "quoteCcy": "USDT",
+            "listTime": 1600280910000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "USDC-USDT",
+            "baseCcy": "USDC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "USTC-USDT",
+            "baseCcy": "USTC",
+            "quoteCcy": "USDT",
+            "listTime": 1653637997000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "UTK-USDT",
+            "baseCcy": "UTK",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "VALUE-USDT",
+            "baseCcy": "VALUE",
+            "quoteCcy": "USDT",
+            "listTime": 1605484800000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "VELO-USDT",
+            "baseCcy": "VELO",
+            "quoteCcy": "USDT",
+            "listTime": 1615194000000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "VELODROME-USDT",
+            "baseCcy": "VELODROME",
+            "quoteCcy": "USDT",
+            "listTime": 1679022470000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "VELA-USDT",
+            "baseCcy": "VELA",
+            "quoteCcy": "USDT",
+            "listTime": 1680074572000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "VRA-USDT",
+            "baseCcy": "VRA",
+            "quoteCcy": "USDT",
+            "listTime": 1619607673000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "VSYS-USDT",
+            "baseCcy": "VSYS",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "WAVES-USDT",
+            "baseCcy": "WAVES",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.00000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "WAXP-USDT",
+            "baseCcy": "WAXP",
+            "quoteCcy": "USDT",
+            "listTime": 1644555543000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "WBTC-USDT",
+            "baseCcy": "WBTC",
+            "quoteCcy": "USDT",
+            "listTime": 1599973211000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.00001",
+            "state": "live"
+        },
+        {
+            "instId": "WGRT-USDT",
+            "baseCcy": "WGRT",
+            "quoteCcy": "USDT",
+            "listTime": 1592346648000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "500",
+            "state": "live"
+        },
+        {
+            "instId": "WIFI-USDT",
+            "baseCcy": "WIFI",
+            "quoteCcy": "USDT",
+            "listTime": 1680779721000,
+            "tickSz": "0.0001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "WING-USDT",
+            "baseCcy": "WING",
+            "quoteCcy": "USDT",
+            "listTime": 1600196400000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "WIN-USDT",
+            "baseCcy": "WIN",
+            "quoteCcy": "USDT",
+            "listTime": 1638431384000,
+            "tickSz": "0.0000001",
+            "lotSz": "1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "WNCG-USDT",
+            "baseCcy": "WNCG",
+            "quoteCcy": "USDT",
+            "listTime": 1629158107000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "WOO-USDT",
+            "baseCcy": "WOO",
+            "quoteCcy": "USDT",
+            "listTime": 1639550836000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "WSB-USDT",
+            "baseCcy": "WSB",
+            "quoteCcy": "USDT",
+            "listTime": 1639637761000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "WXT-USDT",
+            "baseCcy": "WXT",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "XAUT-USDT",
+            "baseCcy": "XAUT",
+            "quoteCcy": "USDT",
+            "listTime": 1658201420000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "XCH-USDT",
+            "baseCcy": "XCH",
+            "quoteCcy": "USDT",
+            "listTime": 1620064872000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XEC-USDT",
+            "baseCcy": "XEC",
+            "quoteCcy": "USDT",
+            "listTime": 1626685200000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "XEM-USDT",
+            "baseCcy": "XEM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "XETA-USDT",
+            "baseCcy": "XETA",
+            "quoteCcy": "USDT",
+            "listTime": 1658289961000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "XLM-USDT",
+            "baseCcy": "XLM",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XMR-USDT",
+            "baseCcy": "XMR",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XNO-USDT",
+            "baseCcy": "XNO",
+            "quoteCcy": "USDT",
+            "listTime": 1654683517000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XPR-USDT",
+            "baseCcy": "XPR",
+            "quoteCcy": "USDT",
+            "listTime": 1597357482000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "XRP-USDT",
+            "baseCcy": "XRP",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XTZ-USDT",
+            "baseCcy": "XTZ",
+            "quoteCcy": "USDT",
+            "listTime": 1573088404000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "YFI-USDT",
+            "baseCcy": "YFI",
+            "quoteCcy": "USDT",
+            "listTime": 1598569239000,
+            "tickSz": "1",
+            "lotSz": "0.000001",
+            "minSz": "0.0005",
+            "state": "live"
+        },
+        {
+            "instId": "YFII-USDT",
+            "baseCcy": "YFII",
+            "quoteCcy": "USDT",
+            "listTime": 1598569254000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "YGG-USDT",
+            "baseCcy": "YGG",
+            "quoteCcy": "USDT",
+            "listTime": 1627482600000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ZBC-USDT",
+            "baseCcy": "ZBC",
+            "quoteCcy": "USDT",
+            "listTime": 1647403807000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "ZEC-USDT",
+            "baseCcy": "ZEC",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ZEN-USDT",
+            "baseCcy": "ZEN",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ZIL-USDT",
+            "baseCcy": "ZIL",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ZKS-USDT",
+            "baseCcy": "ZKS",
+            "quoteCcy": "USDT",
+            "listTime": 1617354088000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ZRX-USDT",
+            "baseCcy": "ZRX",
+            "quoteCcy": "USDT",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ZYRO-USDT",
+            "baseCcy": "ZYRO",
+            "quoteCcy": "USDT",
+            "listTime": 1608076800000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "BTC-USDC",
+            "baseCcy": "BTC",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.1",
+            "lotSz": "0.00000001",
+            "minSz": "0.00001",
+            "state": "live"
+        },
+        {
+            "instId": "ETH-USDC",
+            "baseCcy": "ETH",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "ETH-BTC",
+            "baseCcy": "ETH",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "OKB-USDC",
+            "baseCcy": "OKB",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OKT-USDC",
+            "baseCcy": "OKT",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LTC-USDC",
+            "baseCcy": "LTC",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DOT-USDC",
+            "baseCcy": "DOT",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DOGE-USDC",
+            "baseCcy": "DOGE",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SOL-USDC",
+            "baseCcy": "SOL",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "FIL-USDC",
+            "baseCcy": "FIL",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "1INCH-USDC",
+            "baseCcy": "1INCH",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AAVE-USDC",
+            "baseCcy": "AAVE",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ADA-USDC",
+            "baseCcy": "ADA",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "AGLD-USDC",
+            "baseCcy": "AGLD",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ALGO-USDC",
+            "baseCcy": "ALGO",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ANT-USDC",
+            "baseCcy": "ANT",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "APE-USDC",
+            "baseCcy": "APE",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "API3-USDC",
+            "baseCcy": "API3",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "APT-USDC",
+            "baseCcy": "APT",
+            "quoteCcy": "USDC",
+            "listTime": 1666141200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AR-USDC",
+            "baseCcy": "AR",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ASTR-USDC",
+            "baseCcy": "ASTR",
+            "quoteCcy": "USDC",
+            "listTime": 1654585199000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ATOM-USDC",
+            "baseCcy": "ATOM",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AVAX-USDC",
+            "baseCcy": "AVAX",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "AXS-USDC",
+            "baseCcy": "AXS",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BAT-USDC",
+            "baseCcy": "BAT",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BCH-USDC",
+            "baseCcy": "BCH",
+            "quoteCcy": "USDC",
+            "listTime": 1605477603000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "BLUR-USDC",
+            "baseCcy": "BLUR",
+            "quoteCcy": "USDC",
+            "listTime": 1676356510000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BNB-USDC",
+            "baseCcy": "BNB",
+            "quoteCcy": "USDC",
+            "listTime": 1671540758000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BSV-USDC",
+            "baseCcy": "BSV",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "CEL-USDC",
+            "baseCcy": "CEL",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "CELO-USDC",
+            "baseCcy": "CELO",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CHZ-USDC",
+            "baseCcy": "CHZ",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "COMP-USDC",
+            "baseCcy": "COMP",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "CORE-USDC",
+            "baseCcy": "CORE",
+            "quoteCcy": "USDC",
+            "listTime": 1675836959000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CRO-USDC",
+            "baseCcy": "CRO",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CRV-USDC",
+            "baseCcy": "CRV",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CSPR-USDC",
+            "baseCcy": "CSPR",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DASH-USDC",
+            "baseCcy": "DASH",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DYDX-USDC",
+            "baseCcy": "DYDX",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EGLD-USDC",
+            "baseCcy": "EGLD",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ENS-USDC",
+            "baseCcy": "ENS",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EOS-USDC",
+            "baseCcy": "EOS",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETC-USDC",
+            "baseCcy": "ETC",
+            "quoteCcy": "USDC",
+            "listTime": 1660023174000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETHW-USDC",
+            "baseCcy": "ETHW",
+            "quoteCcy": "USDC",
+            "listTime": 1663296165000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "FLM-USDC",
+            "baseCcy": "FLM",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FLOW-USDC",
+            "baseCcy": "FLOW",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "FLOKI-USDC",
+            "baseCcy": "FLOKI",
+            "quoteCcy": "USDC",
+            "listTime": 1671172201000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "100000",
+            "state": "live"
+        },
+        {
+            "instId": "FLR-USDC",
+            "baseCcy": "FLR",
+            "quoteCcy": "USDC",
+            "listTime": 1673256334000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "FTM-USDC",
+            "baseCcy": "FTM",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GALA-USDC",
+            "baseCcy": "GALA",
+            "quoteCcy": "USDC",
+            "listTime": 1654585199000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "GLMR-USDC",
+            "baseCcy": "GLMR",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GMT-USDC",
+            "baseCcy": "GMT",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "GMX-USDC",
+            "baseCcy": "GMX",
+            "quoteCcy": "USDC",
+            "listTime": 1672900108000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "GRT-USDC",
+            "baseCcy": "GRT",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "HBAR-USDC",
+            "baseCcy": "HBAR",
+            "quoteCcy": "USDC",
+            "listTime": 1660023540000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ICP-USDC",
+            "baseCcy": "ICP",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "IMX-USDC",
+            "baseCcy": "IMX",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "IOST-USDC",
+            "baseCcy": "IOST",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "JST-USDC",
+            "baseCcy": "JST",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "KLAY-USDC",
+            "baseCcy": "KLAY",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KNC-USDC",
+            "baseCcy": "KNC",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KSM-USDC",
+            "baseCcy": "KSM",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LINK-USDC",
+            "baseCcy": "LINK",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LOOKS-USDC",
+            "baseCcy": "LOOKS",
+            "quoteCcy": "USDC",
+            "listTime": 1654585199000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LRC-USDC",
+            "baseCcy": "LRC",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LUNC-USDC",
+            "baseCcy": "LUNC",
+            "quoteCcy": "USDC",
+            "listTime": 1653637997000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "LUNA-USDC",
+            "baseCcy": "LUNA",
+            "quoteCcy": "USDC",
+            "listTime": 1653732267000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MANA-USDC",
+            "baseCcy": "MANA",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MASK-USDC",
+            "baseCcy": "MASK",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "MATIC-USDC",
+            "baseCcy": "MATIC",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MINA-USDC",
+            "baseCcy": "MINA",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MKR-USDC",
+            "baseCcy": "MKR",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "NEAR-USDC",
+            "baseCcy": "NEAR",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OMG-USDC",
+            "baseCcy": "OMG",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OP-USDC",
+            "baseCcy": "OP",
+            "quoteCcy": "USDC",
+            "listTime": 1654017130000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PEOPLE-USDC",
+            "baseCcy": "PEOPLE",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "PERP-USDC",
+            "baseCcy": "PERP",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "RDNT-USDC",
+            "baseCcy": "RDNT",
+            "quoteCcy": "USDC",
+            "listTime": 1679379214000,
+            "tickSz": "0.0001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "RPL-USDC",
+            "baseCcy": "RPL",
+            "quoteCcy": "USDC",
+            "listTime": 1677659381000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "RSR-USDC",
+            "baseCcy": "RSR",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SAND-USDC",
+            "baseCcy": "SAND",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SHIB-USDC",
+            "baseCcy": "SHIB",
+            "quoteCcy": "USDC",
+            "listTime": 1653286331000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "50000",
+            "state": "live"
+        },
+        {
+            "instId": "SLP-USDC",
+            "baseCcy": "SLP",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SNX-USDC",
+            "baseCcy": "SNX",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SRM-USDC",
+            "baseCcy": "SRM",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SSV-USDC",
+            "baseCcy": "SSV",
+            "quoteCcy": "USDC",
+            "listTime": 1677659155000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "STORJ-USDC",
+            "baseCcy": "STORJ",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "STX-USDC",
+            "baseCcy": "STX",
+            "quoteCcy": "USDC",
+            "listTime": 1660023621000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SUSHI-USDC",
+            "baseCcy": "SUSHI",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "TAMA-USDC",
+            "baseCcy": "TAMA",
+            "quoteCcy": "USDC",
+            "listTime": 1666839938000,
+            "tickSz": "0.000001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "THETA-USDC",
+            "baseCcy": "THETA",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "TON-USDC",
+            "baseCcy": "TON",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "TRB-USDC",
+            "baseCcy": "TRB",
+            "quoteCcy": "USDC",
+            "listTime": 1660023668000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "TRX-USDC",
+            "baseCcy": "TRX",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "UNI-USDC",
+            "baseCcy": "UNI",
+            "quoteCcy": "USDC",
+            "listTime": 1653975320000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "USDT-USDC",
+            "baseCcy": "USDT",
+            "quoteCcy": "USDC",
+            "listTime": 1675308867000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "USTC-USDC",
+            "baseCcy": "USTC",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.00001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "WAVES-USDC",
+            "baseCcy": "WAVES",
+            "quoteCcy": "USDC",
+            "listTime": 1654585175000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "XEM-USDC",
+            "baseCcy": "XEM",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "XLM-USDC",
+            "baseCcy": "XLM",
+            "quoteCcy": "USDC",
+            "listTime": 1655787830000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XMR-USDC",
+            "baseCcy": "XMR",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XRP-USDC",
+            "baseCcy": "XRP",
+            "quoteCcy": "USDC",
+            "listTime": 1585176747000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XTZ-USDC",
+            "baseCcy": "XTZ",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "YFI-USDC",
+            "baseCcy": "YFI",
+            "quoteCcy": "USDC",
+            "listTime": 1656388045000,
+            "tickSz": "1",
+            "lotSz": "0.000001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "YFII-USDC",
+            "baseCcy": "YFII",
+            "quoteCcy": "USDC",
+            "listTime": 1660023463000,
+            "tickSz": "0.1",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "YGG-USDC",
+            "baseCcy": "YGG",
+            "quoteCcy": "USDC",
+            "listTime": 1658816142000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ZEC-USDC",
+            "baseCcy": "ZEC",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ZIL-USDC",
+            "baseCcy": "ZIL",
+            "quoteCcy": "USDC",
+            "listTime": 1655121032000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "BTC-DAI",
+            "baseCcy": "BTC",
+            "quoteCcy": "DAI",
+            "listTime": 1576623608000,
+            "tickSz": "0.1",
+            "lotSz": "0.00000001",
+            "minSz": "0.00001",
+            "state": "live"
+        },
+        {
+            "instId": "ETH-DAI",
+            "baseCcy": "ETH",
+            "quoteCcy": "DAI",
+            "listTime": 1576623617000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "OKB-BTC",
+            "baseCcy": "OKB",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OKT-BTC",
+            "baseCcy": "OKT",
+            "quoteCcy": "BTC",
+            "listTime": 1611012711000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LTC-BTC",
+            "baseCcy": "LTC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DOT-BTC",
+            "baseCcy": "DOT",
+            "quoteCcy": "BTC",
+            "listTime": 1598061649000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DOGE-BTC",
+            "baseCcy": "DOGE",
+            "quoteCcy": "BTC",
+            "listTime": 1618901953000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "SOL-BTC",
+            "baseCcy": "SOL",
+            "quoteCcy": "BTC",
+            "listTime": 1601434800000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "FIL-BTC",
+            "baseCcy": "FIL",
+            "quoteCcy": "BTC",
+            "listTime": 1606950000000,
+            "tickSz": "0.0000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "AAVE-BTC",
+            "baseCcy": "AAVE",
+            "quoteCcy": "BTC",
+            "listTime": 1603317600000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ADA-BTC",
+            "baseCcy": "ADA",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ALGO-BTC",
+            "baseCcy": "ALGO",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ANT-BTC",
+            "baseCcy": "ANT",
+            "quoteCcy": "BTC",
+            "listTime": 1597255081000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "APE-BTC",
+            "baseCcy": "APE",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ATOM-BTC",
+            "baseCcy": "ATOM",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AVAX-BTC",
+            "baseCcy": "AVAX",
+            "quoteCcy": "BTC",
+            "listTime": 1600738200000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BAT-BTC",
+            "baseCcy": "BAT",
+            "quoteCcy": "BTC",
+            "listTime": 1583197242000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "BCH-BTC",
+            "baseCcy": "BCH",
+            "quoteCcy": "BTC",
+            "listTime": 1605477603000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "BSV-BTC",
+            "baseCcy": "BSV",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "CHZ-BTC",
+            "baseCcy": "CHZ",
+            "quoteCcy": "BTC",
+            "listTime": 1614754800000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "COMP-BTC",
+            "baseCcy": "COMP",
+            "quoteCcy": "BTC",
+            "listTime": 1593379995000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "CRO-BTC",
+            "baseCcy": "CRO",
+            "quoteCcy": "BTC",
+            "listTime": 1571785200000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "CRV-BTC",
+            "baseCcy": "CRV",
+            "quoteCcy": "BTC",
+            "listTime": 1597346596000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "CVC-BTC",
+            "baseCcy": "CVC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DASH-BTC",
+            "baseCcy": "DASH",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DGB-BTC",
+            "baseCcy": "DGB",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000000001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "DYDX-BTC",
+            "baseCcy": "DYDX",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "EGLD-BTC",
+            "baseCcy": "EGLD",
+            "quoteCcy": "BTC",
+            "listTime": 1601429400000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ENJ-BTC",
+            "baseCcy": "ENJ",
+            "quoteCcy": "BTC",
+            "listTime": 1616029200000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "ENS-BTC",
+            "baseCcy": "ENS",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "EOS-BTC",
+            "baseCcy": "EOS",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETC-BTC",
+            "baseCcy": "ETC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETHW-BTC",
+            "baseCcy": "ETHW",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FLOW-BTC",
+            "baseCcy": "FLOW",
+            "quoteCcy": "BTC",
+            "listTime": 1614031200000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "GRT-BTC",
+            "baseCcy": "GRT",
+            "quoteCcy": "BTC",
+            "listTime": 1608246000000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "HBAR-BTC",
+            "baseCcy": "HBAR",
+            "quoteCcy": "BTC",
+            "listTime": 1568679563000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ICP-BTC",
+            "baseCcy": "ICP",
+            "quoteCcy": "BTC",
+            "listTime": 1620662460000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "INT-BTC",
+            "baseCcy": "INT",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000000001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "IOST-BTC",
+            "baseCcy": "IOST",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000000001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "KLAY-BTC",
+            "baseCcy": "KLAY",
+            "quoteCcy": "BTC",
+            "listTime": 1599706800000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KNC-BTC",
+            "baseCcy": "KNC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "KSM-BTC",
+            "baseCcy": "KSM",
+            "quoteCcy": "BTC",
+            "listTime": 1599004800000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LINK-BTC",
+            "baseCcy": "LINK",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "LRC-BTC",
+            "baseCcy": "LRC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LUNA-BTC",
+            "baseCcy": "LUNA",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "LUNC-BTC",
+            "baseCcy": "LUNC",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.00000000001",
+            "lotSz": "1",
+            "minSz": "10000",
+            "state": "live"
+        },
+        {
+            "instId": "MANA-BTC",
+            "baseCcy": "MANA",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.01",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MATIC-BTC",
+            "baseCcy": "MATIC",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MKR-BTC",
+            "baseCcy": "MKR",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "NEAR-BTC",
+            "baseCcy": "NEAR",
+            "quoteCcy": "BTC",
+            "listTime": 1606950015000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "NEO-BTC",
+            "baseCcy": "NEO",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.00001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "NULS-BTC",
+            "baseCcy": "NULS",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OMG-BTC",
+            "baseCcy": "OMG",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ONT-BTC",
+            "baseCcy": "ONT",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "PEOPLE-BTC",
+            "baseCcy": "PEOPLE",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.0000000001",
+            "lotSz": "0.01",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "QTUM-BTC",
+            "baseCcy": "QTUM",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "REN-BTC",
+            "baseCcy": "REN",
+            "quoteCcy": "BTC",
+            "listTime": 1598572843000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "RVN-BTC",
+            "baseCcy": "RVN",
+            "quoteCcy": "BTC",
+            "listTime": 1582074001000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "SHIB-BTC",
+            "baseCcy": "SHIB",
+            "quoteCcy": "BTC",
+            "listTime": 1666675534000,
+            "tickSz": "0.000000000001",
+            "lotSz": "1",
+            "minSz": "50000",
+            "state": "live"
+        },
+        {
+            "instId": "STX-BTC",
+            "baseCcy": "STX",
+            "quoteCcy": "BTC",
+            "listTime": 1614852000000,
+            "tickSz": "0.00000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "THETA-BTC",
+            "baseCcy": "THETA",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.01",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "TRX-BTC",
+            "baseCcy": "TRX",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000000001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "UNI-BTC",
+            "baseCcy": "UNI",
+            "quoteCcy": "BTC",
+            "listTime": 1600284608000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "WAVES-BTC",
+            "baseCcy": "WAVES",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "WBTC-BTC",
+            "baseCcy": "WBTC",
+            "quoteCcy": "BTC",
+            "listTime": 1599973200000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "WXT-BTC",
+            "baseCcy": "WXT",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000000001",
+            "lotSz": "1",
+            "minSz": "100",
+            "state": "live"
+        },
+        {
+            "instId": "XCH-BTC",
+            "baseCcy": "XCH",
+            "quoteCcy": "BTC",
+            "listTime": 1620064885000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XEM-BTC",
+            "baseCcy": "XEM",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "XLM-BTC",
+            "baseCcy": "XLM",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XMR-BTC",
+            "baseCcy": "XMR",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XRP-BTC",
+            "baseCcy": "XRP",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XTZ-BTC",
+            "baseCcy": "XTZ",
+            "quoteCcy": "BTC",
+            "listTime": 1573088404000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "YFI-BTC",
+            "baseCcy": "YFI",
+            "quoteCcy": "BTC",
+            "listTime": 1598572829000,
+            "tickSz": "0.001",
+            "lotSz": "0.0001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "ZEC-BTC",
+            "baseCcy": "ZEC",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ZEN-BTC",
+            "baseCcy": "ZEN",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.00001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ZIL-BTC",
+            "baseCcy": "ZIL",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.000000001",
+            "lotSz": "0.001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "ZRX-BTC",
+            "baseCcy": "ZRX",
+            "quoteCcy": "BTC",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OKB-ETH",
+            "baseCcy": "OKB",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OKT-ETH",
+            "baseCcy": "OKT",
+            "quoteCcy": "ETH",
+            "listTime": 1611012719000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LTC-ETH",
+            "baseCcy": "LTC",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "DOT-ETH",
+            "baseCcy": "DOT",
+            "quoteCcy": "ETH",
+            "listTime": 1598061640000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "DOGE-ETH",
+            "baseCcy": "DOGE",
+            "quoteCcy": "ETH",
+            "listTime": 1618901960000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "FIL-ETH",
+            "baseCcy": "FIL",
+            "quoteCcy": "ETH",
+            "listTime": 1606950008000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "AAVE-ETH",
+            "baseCcy": "AAVE",
+            "quoteCcy": "ETH",
+            "listTime": 1603317633000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ADA-ETH",
+            "baseCcy": "ADA",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "API3-ETH",
+            "baseCcy": "API3",
+            "quoteCcy": "ETH",
+            "listTime": 1607468421000,
+            "tickSz": "0.000001",
+            "lotSz": "0.000001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ATOM-ETH",
+            "baseCcy": "ATOM",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "AVAX-ETH",
+            "baseCcy": "AVAX",
+            "quoteCcy": "ETH",
+            "listTime": 1600738206000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "BETH-ETH",
+            "baseCcy": "BETH",
+            "quoteCcy": "ETH",
+            "listTime": 1608678028000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "CRV-ETH",
+            "baseCcy": "CRV",
+            "quoteCcy": "ETH",
+            "listTime": 1597346596000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "DASH-ETH",
+            "baseCcy": "DASH",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "EOS-ETH",
+            "baseCcy": "EOS",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "ETC-ETH",
+            "baseCcy": "ETC",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "IOST-ETH",
+            "baseCcy": "IOST",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "KSM-ETH",
+            "baseCcy": "KSM",
+            "quoteCcy": "ETH",
+            "listTime": 1599004806000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LINK-ETH",
+            "baseCcy": "LINK",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "MANA-ETH",
+            "baseCcy": "MANA",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.01",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "MKR-ETH",
+            "baseCcy": "MKR",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        },
+        {
+            "instId": "NEAR-ETH",
+            "baseCcy": "NEAR",
+            "quoteCcy": "ETH",
+            "listTime": 1606950023000,
+            "tickSz": "0.000001",
+            "lotSz": "1",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "NEO-ETH",
+            "baseCcy": "NEO",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.00001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "NULS-ETH",
+            "baseCcy": "NULS",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OM-ETH",
+            "baseCcy": "OM",
+            "quoteCcy": "ETH",
+            "listTime": 1598324400000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.0001",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "QTUM-ETH",
+            "baseCcy": "QTUM",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SNX-ETH",
+            "baseCcy": "SNX",
+            "quoteCcy": "ETH",
+            "listTime": 1595543578000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "SOL-ETH",
+            "baseCcy": "SOL",
+            "quoteCcy": "ETH",
+            "listTime": 1601434808000,
+            "tickSz": "0.00001",
+            "lotSz": "0.0001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "SUSHI-ETH",
+            "baseCcy": "SUSHI",
+            "quoteCcy": "ETH",
+            "listTime": 1598929200000,
+            "tickSz": "0.000001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "TRX-ETH",
+            "baseCcy": "TRX",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00000001",
+            "lotSz": "0.01",
+            "minSz": "10",
+            "state": "live"
+        },
+        {
+            "instId": "UNI-ETH",
+            "baseCcy": "UNI",
+            "quoteCcy": "ETH",
+            "listTime": 1600284600000,
+            "tickSz": "0.000001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "WBTC-ETH",
+            "baseCcy": "WBTC",
+            "quoteCcy": "ETH",
+            "listTime": 1599973209000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "XLM-ETH",
+            "baseCcy": "XLM",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.0000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "XMR-ETH",
+            "baseCcy": "XMR",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.00001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "XRP-ETH",
+            "baseCcy": "XRP",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.000001",
+            "lotSz": "0.001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "YFI-ETH",
+            "baseCcy": "YFI",
+            "quoteCcy": "ETH",
+            "listTime": 1598572836000,
+            "tickSz": "0.01",
+            "lotSz": "0.0001",
+            "minSz": "0.0001",
+            "state": "live"
+        },
+        {
+            "instId": "ZEC-ETH",
+            "baseCcy": "ZEC",
+            "quoteCcy": "ETH",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "LTC-OKB",
+            "baseCcy": "LTC",
+            "quoteCcy": "OKB",
+            "listTime": 1548133413000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.01",
+            "state": "live"
+        },
+        {
+            "instId": "ETC-OKB",
+            "baseCcy": "ETC",
+            "quoteCcy": "OKB",
+            "listTime": 1548133413000,
+            "tickSz": "0.001",
+            "lotSz": "0.00001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "XRP-OKB",
+            "baseCcy": "XRP",
+            "quoteCcy": "OKB",
+            "listTime": 1548133413000,
+            "tickSz": "0.0001",
+            "lotSz": "0.000001",
+            "minSz": "1",
+            "state": "live"
+        },
+        {
+            "instId": "OKDOT1-DOT",
+            "baseCcy": "OKDOT1",
+            "quoteCcy": "DOT",
+            "listTime": 1648708851000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "OKDOT2-DOT",
+            "baseCcy": "OKDOT2",
+            "quoteCcy": "DOT",
+            "listTime": 1648708851000,
+            "tickSz": "0.0001",
+            "lotSz": "0.0001",
+            "minSz": "0.1",
+            "state": "live"
+        },
+        {
+            "instId": "BTC-EURT",
+            "baseCcy": "BTC",
+            "quoteCcy": "EURT",
+            "listTime": 1658201420000,
+            "tickSz": "0.1",
+            "lotSz": "0.00000001",
+            "minSz": "0.00001",
+            "state": "live"
+        },
+        {
+            "instId": "ETH-EURT",
+            "baseCcy": "ETH",
+            "quoteCcy": "EURT",
+            "listTime": 1658201420000,
+            "tickSz": "0.01",
+            "lotSz": "0.000001",
+            "minSz": "0.001",
+            "state": "live"
+        }
+    ]
+}
