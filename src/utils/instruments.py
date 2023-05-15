@@ -31,6 +31,8 @@ def extract(filePath: str, toPath = None) -> List[dict]:
             f.write(json.dumps(final_data, indent=4))
     return result
 
+defaultInstruments = extract('D:\\projects\\metabacktest\\tmp\\raw-okx-instruments-SPOT.json')
+
 if __name__ == "__main__":
     if len(sys.argv) == 3:
         extract(sys.argv[1], sys.argv[2])
