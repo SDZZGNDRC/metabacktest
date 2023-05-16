@@ -1,13 +1,16 @@
 from typing import List, Dict, Set, Tuple
 from utils.instruments import defaultInstruments
-from utils.helper import get_lastPrice, get_significant_digits
-import instruction
-from instruction import Instruction
+from utils.helper import get_lastPrice, get_significant_digits, generate_random_valueInt
+from instruction import *
 import sys
 import random
 
 DefaultSuccessRate = 0.001
 DefaultValuePerCcy = 1000
+
+TypeInstructions = List[Instruction]
+TypeAskBids = List[Tuple[int, Tuple[float, float]]]
+TypeBalance = Dict[str, float]
 
 class TestFactory:
     '''
@@ -51,7 +54,7 @@ class TestFactory:
         result = random.sample(totalPairs, k)
         return result
     
-    def genBalance(self) -> Dict[str, float]:
+    def genBalance(self) -> TypeBalance:
         '''
         根据valuePerCcy生成策略的初始账户余额
         NOTICE: 目前只支持SPOT; 后续应该考虑随机化生成
@@ -76,14 +79,70 @@ class TestFactory:
         end = start + length*1000
         return (start, end)
     
-    def genInsts(self, time_period : Tuple[int, int]) -> List[Instruction]:
+    def genInsts(self, time_period : Tuple[int, int]) -> TypeInstructions:
         '''
         随机生成一次回测中策略发出的交易指令
         NOTICE: 只填充 instType 和 direct 字段
+        NOTICE: 只支持 LimitOrder 和 MarketOrder 类型的交易指令
         '''
-        time_range = (time_period[1]-time_period[0])/1000
-        num = 
+
+        # 确定交易指令的发出时刻和数量
+        ts = []
+        t = time_period[0]
+        while t <= time_period[1]:
+            ts.append(t)
+            t = t + 1000*generate_random_valueInt(self.secPerInst, 0.5) # 随机生成间隔, 基准为secPerInst, 最大偏离50%
+        
+        # 生成交易指令
+        result = []
+        for i in ts:
+            instType = LimitOrder if random.randint(0,1) else MarketOrder
+            direct = BUY if random.randint(0,1) else SELL
+            inst = Instruction(instType, direct, i)
+            result.append(inst)
+        
+        return result
     
+    def genAskBids(self, 
+                  pair: str, 
+                  p0: float, 
+                  time_period : Tuple[int, int], 
+                  sigma: float) -> TypeAskBids:
+        '''
+        随机生成AskBid序列
+        NOTICE: 生成的AskBid序列的一阶差分符合正态分布
+        '''
+        # 获取下单精度
+        tickSz = float(List(filter(lambda x: x['instId']==pair), self.instruments)[0]['tickSz'])
+        
+        # 生成基准价格
+        time_range = int((time_period[1]-time_period[0])/1000) + 1
+        prices = [(time_period[0], p0)]
+        for i in range(1, time_range):
+            delta_percent = random.normalvariate(0, sigma) # 变化百分比, 符合正态分布
+            delta_percent = max(delta_percent, -0.8) # 最小的变化百分比为 -0.8
+            delta_percent = min(delta_percent, 0.8) # 最小的变化百分比为 0.8
+            
+            delta = prices[-1] * delta_percent # 变化绝对值
+            next_price = prices[-1] + delta
+            prices.append((time_period[0]+1000*i, next_price))
+        
+        # 生成 ask 和 bid
+        askbids = []
+        for p in prices:
+            gap_t = round(random.uniform(0, 0.01) * p[1], get_significant_digits(tickSz))
+            price_gap = max(tickSz, gap_t) # 生成ask和bid间的价差
+            bid = p[1]
+            ask = p[1] + price_gap
+            askbids.append((p[0], (ask, bid)))
+        
+        return askbids
+    
+    def fillInsts(self, askbids: TypeAskBids, insts: TypeInstructions) -> TypeInstructions:
+        '''
+        填充交易指令的剩余部分
+        '''
+        
     def getTotalPairs(self) -> List[str]:
         '''
         获取全体交易对

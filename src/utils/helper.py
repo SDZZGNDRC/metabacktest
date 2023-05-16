@@ -50,7 +50,7 @@ def get_lastPrice(instType: str) -> Dict[str, float]:
     return result
 
 
-def generate_random_value(v0, deviation) -> float:
+def generate_random_valueInt(v0, deviation) -> int:
     delta = v0 * deviation
     x = random.uniform(-delta, delta)
-    return v0 + x
+    return int(v0 + x)
