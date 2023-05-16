@@ -11,6 +11,7 @@ DefaultValuePerCcy = 1000
 TypeInstructions = List[Instruction]
 TypeAskBids = List[Tuple[int, Tuple[float, float]]]
 TypeBalance = Dict[str, float]
+TypeBalanceHist = List[Tuple[int, TypeBalance]]
 
 class TestFactory:
     '''
@@ -83,7 +84,7 @@ class TestFactory:
         '''
         随机生成一次回测中策略发出的交易指令
         NOTICE: 只填充 instType 和 direct 字段
-        NOTICE: 只支持 LimitOrder 和 MarketOrder 类型的交易指令
+        NOTICE: 只支持 MarketOrder 类型的交易指令
         '''
 
         # 确定交易指令的发出时刻和数量
@@ -96,9 +97,14 @@ class TestFactory:
         # 生成交易指令
         result = []
         for i in ts:
-            instType = LimitOrder if random.randint(0,1) else MarketOrder
+            # instType = LimitOrder if random.randint(0,1) else MarketOrder
+            instType = MarketOrder # 暂时只支持市价单
             direct = BUY if random.randint(0,1) else SELL
             inst = Instruction(instType, direct, i)
+
+            # 随机决定该指令的交易对
+            totalPairs = self.getTotalPairs(filters=['USDT-', 'USDC-'])
+            inst.pair = random.choice(totalPairs)
             result.append(inst)
         
         return result
@@ -113,7 +119,7 @@ class TestFactory:
         NOTICE: 生成的AskBid序列的一阶差分符合正态分布
         '''
         # 获取下单精度
-        tickSz = float(List(filter(lambda x: x['instId']==pair), self.instruments)[0]['tickSz'])
+        tickSz = float(list(filter(lambda x: x['instId']==pair), self.instruments)[0]['tickSz'])
         
         # 生成基准价格
         time_range = int((time_period[1]-time_period[0])/1000) + 1
@@ -138,17 +144,58 @@ class TestFactory:
         
         return askbids
     
-    def fillInsts(self, askbids: TypeAskBids, insts: TypeInstructions) -> TypeInstructions:
+    def fillInsts(self, 
+                  totalAskBids: Dict[str, TypeAskBids], 
+                  insts: TypeInstructions
+                  ) -> TypeInstructions:
         '''
         填充交易指令的剩余部分
+        NOTICE: 只支持 MarketOrder
+        NOTICE: 当前的MetaTest只支持发出'即时性'的交易指令, 
+                即, 如果某个时刻发出的交易指令(特指LimitOrder)未能马上完成
+                则该交易指令会马上被撤销
+        NOTICE: 前的MetaTest假设交易的成交不会对订单簿产生影响(当然这只在交易量非常小的情况下近似成立).
+                此外, 不同的时刻的订单簿都是相互独立的, 彼此间没有连续性可言(这当然是不成立的, 
+                但用于测试回测系统的正确性应该是足够了)
+        '''
+        prices = get_lastPrice()
+        for inst in insts:
+            askbids = totalAskBids[inst.pair] # 选择指定的askbids
+            askbid = list(filter(lambda x: x[0] == inst.ts, askbids))[0]
+            if inst.direct == BUY:
+                inst.price = askbid[0]
+            else:
+                inst.price = askbid[1]
+            
+            # 随机生成委托量, 基准值为 10 USDT
+            instrument = list(filter(lambda x: x['instId']==inst.pair, self.instruments))[0]
+            raw_value = max(random.normalvariate(10, 5), 1) / prices[inst.pair]
+            raw_value = round(raw_value, get_significant_digits(instrument['lotSz']))
+            value = max(float(instrument['minSz']), raw_value)
+            inst.value = value
+            
+        return insts
+
+    def calBalanceHist(self, ) -> TypeBalanceHist:
+        '''
+        计算不同时刻下的Balance的值
         '''
         
-    def getTotalPairs(self) -> List[str]:
+    def getTotalPairs(self, filters: List[str] = None) -> List[str]:
         '''
         获取全体交易对
         '''
         totalPairs = [i['instId'] for i in self.instruments] # 全体交易对
-        return totalPairs
+        if filters != None:
+            result = []
+            for pair in totalPairs:
+                for filter in filters:
+                    if filter not in pair:
+                        result.append(pair)
+                        break
+            return result
+        else:
+            return totalPairs
     
     def getTotalCcy(self) -> Set[str]:
         '''

@@ -19,7 +19,7 @@ def get_significant_digits(num : Union[str, float]) -> int:
     
     str_num = str(num)
     if '.' not in str_num:
-        return len(str_num)
+        return -1 * (len(str_num)-1)
     str_num = str_num.rstrip('0')  # 去除末尾的零
     return len(str_num) - str_num.index('.') - 1
 
