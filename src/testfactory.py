@@ -1,3 +1,4 @@
+from copy import deepcopy
 from typing import List, Dict, Set, Tuple
 from utils.instruments import defaultInstruments
 from utils.helper import get_lastPrice, get_significant_digits, generate_random_valueInt
@@ -12,11 +13,15 @@ TypeInstructions = List[Instruction]
 TypeAskBids = List[Tuple[int, Tuple[float, float]]]
 TypeBalance = Dict[str, float]
 TypeBalanceHist = List[Tuple[int, TypeBalance]]
+TypeBookItem = Tuple[float, float] # (价格, 委托量)
+TypeBook = Tuple[List[TypeBookItem], List[TypeBookItem]] # (Asks, Bids)
+TypeBooks = List[Tuple[int, TypeBook]]
 
 class TestFactory:
     '''
     该类根据配置参数生成metatest
     '''
+    defaultPairsFilters = ['-USDC']
     def __init__(self, 
                  testNum = 100,
                  maxSec = 86400, 
@@ -65,7 +70,7 @@ class TestFactory:
         lastPrices = get_lastPrice('SPOT')
         for ccy in totalCcy:
             pair = '-'.join(ccy, 'USDT')
-            instrument = list(filter(lambda x: x['instId'] == pair, self.instruments))[0]
+            instrument = self.getInstrument(pair)
             price = lastPrices[pair]
             value = round(self.valuePerCcy/price, get_significant_digits(instrument['lotSz']))
             balance[pair] = value
@@ -119,7 +124,7 @@ class TestFactory:
         NOTICE: 生成的AskBid序列的一阶差分符合正态分布
         '''
         # 获取下单精度
-        tickSz = float(list(filter(lambda x: x['instId']==pair), self.instruments)[0]['tickSz'])
+        tickSz = self.getTickSz(pair)
         
         # 生成基准价格
         time_range = int((time_period[1]-time_period[0])/1000) + 1
@@ -168,7 +173,7 @@ class TestFactory:
                 inst.price = askbid[1]
             
             # 随机生成委托量, 基准值为 10 USDT
-            instrument = list(filter(lambda x: x['instId']==inst.pair, self.instruments))[0]
+            instrument = self.getInstrument(pair=inst.pair)
             raw_value = max(random.normalvariate(10, 5), 1) / prices[inst.pair]
             raw_value = round(raw_value, get_significant_digits(instrument['lotSz']))
             value = max(float(instrument['minSz']), raw_value)
@@ -176,20 +181,54 @@ class TestFactory:
             
         return insts
 
-    def calBalanceHist(self, ) -> TypeBalanceHist:
+    def calBalanceHist(self, 
+                       insts: TypeInstructions,
+                       original_balance: TypeBalance,
+                       ) -> TypeBalanceHist:
         '''
         计算不同时刻下的Balance的值
+        NOTICE: 当前只支持OKX的市价单手续费
+        NOTICE: 当前只支持 SPOT
         '''
+        commission = { # 手续费
+            MarketOrder: {
+                'MAKER': 0.0008,
+                'TAKER': 0.0010,
+            }
+        }
+        balanceHist: TypeBalanceHist = []
+        nextBalance = deepcopy(original_balance)
+        for inst in insts:
+            assert inst.instType == MarketOrder
+            baseCcy, quoteCcy = inst.pair.split('-')
+            if inst.direct == BUY: # get baseCcy
+                nextBalance[baseCcy] = (nextBalance[baseCcy] + inst.value)
+                nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MarketOrder]['TAKER']), \
+                                            self.getLotSz())
+                nextBalance[quoteCcy] = nextBalance[quoteCcy] - (inst.value*inst.price) # NOTICE: 也许需要进行舍入?
+            elif inst.direct == SELL: # get quoteCcy
+                nextBalance[baseCcy] = nextBalance[baseCcy] - inst.value
+                nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # NOTICE: 也许需要进行舍入?
+            
+            balanceHist.append((inst.ts, deepcopy(nextBalance)))
         
-    def getTotalPairs(self, filters: List[str] = None) -> List[str]:
+        return balanceHist
+
+    def genBooks(self) -> TypeBooks:
+        '''
+        随机生成订单簿
+        '''
+
+    def getTotalPairs(self, filters: List[str] = []) -> List[str]:
         '''
         获取全体交易对
         '''
         totalPairs = [i['instId'] for i in self.instruments] # 全体交易对
-        if filters != None:
+        all_filters = self.defaultPairsFilters + filters
+        if all_filters != []:
             result = []
             for pair in totalPairs:
-                for filter in filters:
+                for filter in all_filters:
                     if filter not in pair:
                         result.append(pair)
                         break
@@ -209,4 +248,30 @@ class TestFactory:
             result.add(quoteCcy)
         
         return result
-        
+    
+    def getLotSz(self, pair: str) -> float:
+        '''
+        获取下单数量精度
+        '''
+        instrument = self.getInstrument(pair)
+        return float(instrument['lotSz'])
+
+    def getTickSz(self, pair: str) -> float:
+        '''
+        获取下单价格精度
+        '''
+        instrument = self.getInstrument(pair)
+        return float(instrument['tickSz'])
+    
+    def getMinSz(self, pair: str) -> float:
+        '''
+        获取最小下单数量
+        '''
+        instrument = self.getInstrument(pair)
+        return float(instrument['minSz'])
+    
+    def getInstrument(self, pair: str) -> Dict:
+        '''
+        获取指定交易对的信息
+        '''
+        return list(filter(lambda x: x['instId']==pair, self.instruments))[0]
