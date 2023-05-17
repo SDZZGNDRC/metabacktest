@@ -1,7 +1,7 @@
 from copy import deepcopy
 from typing import List, Dict, Set, Tuple
 from utils.instruments import defaultInstruments
-from utils.helper import get_lastPrice, get_significant_digits, generate_random_valueInt
+from utils.helper import *
 from instruction import *
 import sys
 import random
@@ -15,7 +15,7 @@ TypeBalance = Dict[str, float]
 TypeBalanceHist = List[Tuple[int, TypeBalance]]
 TypeBookItem = Tuple[float, float] # (价格, 委托量)
 TypeBook = Tuple[List[TypeBookItem], List[TypeBookItem]] # (Asks, Bids)
-TypeBooks = List[Tuple[int, TypeBook]]
+TypeBooks = List[Tuple[int, TypeBook]] # (timestamp, TypeBook)
 
 class TestFactory:
     '''
@@ -214,11 +214,39 @@ class TestFactory:
         
         return balanceHist
 
-    def genBooks(self) -> TypeBooks:
+    def genBooks(self, 
+                 time_period: Tuple[int, int],
+                 insts: TypeInstructions,
+                 askbids: TypeAskBids,
+                 pair: str,
+                 ) -> TypeBooks:
         '''
         随机生成订单簿
+        NOTICE: 当前只假定一个交易指令可以被一档订单消耗完成
+        NOTICE: 假定订单簿深度为 20
         '''
-
+        Depth = 20 # 订单簿深度
+        time_range = int((time_period[1]-time_period[0])/1000) + 1
+        
+        books = []
+        for t in time_range:
+            askbid = askbids[t][1] # 卖一价; 买一价
+            assert askbid[t][0] == 1000*t + time_period[0]
+            inst = self.getInstructions(t, insts)
+            if inst == None: # 该时间戳下不存在交易指令; 随机生成整个订单簿
+                ask_ps = generate_order_seq(askbid[0], 2, Depth)
+                bid_ps = generate_order_seq(askbid[1], 2, Depth, False)
+                ask_v = generate_random_seq(10, 10/3, Depth, self.getLotSz(pair), self.getMinSz(pair))
+                bid_v = generate_random_seq(10, 10/3, Depth, self.getLotSz(pair), self.getMinSz(pair))
+                asks = []
+                bids = []
+                for i in range(Depth):
+                    asks.append((ask_ps[i], ask_v[i]))
+                    bids.append((bid_ps[i], bid_v[i]))
+                books.append((1000*t + time_period[0], (asks, bids)))
+            elif inst.pair == pair: # 该时间戳下存在对应交易对的交易指令
+                
+                    
     def getTotalPairs(self, filters: List[str] = []) -> List[str]:
         '''
         获取全体交易对
@@ -275,3 +303,13 @@ class TestFactory:
         获取指定交易对的信息
         '''
         return list(filter(lambda x: x['instId']==pair, self.instruments))[0]
+    
+    def getInstructions(self, ts: int, instructions: TypeInstructions) -> Instruction:
+        '''
+        获取指定时间戳的交易指令, 如果不存在, 返回 None
+        '''
+        for inst in instructions:
+            if inst.ts == ts:
+                return inst
+        
+        return None # 不存在则返回 None

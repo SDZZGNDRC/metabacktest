@@ -54,3 +54,34 @@ def generate_random_valueInt(v0, deviation) -> int:
     delta = v0 * deviation
     x = random.uniform(-delta, delta)
     return int(v0 + x)
+
+def generate_order_seq(a0, step, count, is_increasing: bool = True) -> List[float]:
+    '''
+    随机生成一串以a0为首项的递增或递减的随机数序列
+    '''
+    seq = [a0]
+    for _ in range(1, count):
+        if is_increasing:
+            delta = max(0, random.normalvariate(step, step/3))
+        else:
+            delta = min(0, random.normalvariate(step, step/3))
+        a = seq[-1] + delta
+        seq.append(a)
+    return seq
+
+def generate_random_seq(
+                        mu: float, 
+                        sigma: float, 
+                        count: float, 
+                        lotSz: float,
+                        minSz: float,
+                        ) -> List[float]:
+    '''
+    随机生成一串均值为mu, 方差为sigma, 长度为count的正随机数序列
+    '''
+    seq = []
+    for _ in range(count):
+        t = round(random.normalvariate(mu, sigma), get_significant_digits(lotSz))
+        v = max(minSz, t)
+        seq.append(v)
+    return seq
