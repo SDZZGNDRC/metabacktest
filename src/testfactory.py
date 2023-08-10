@@ -1,21 +1,20 @@
 from copy import deepcopy
-from typing import List, Dict, Set, Tuple
+from typing import List, Dict, Optional, Set, Tuple
 from utils.instruments import defaultInstruments
 from utils.helper import *
 from instruction import *
+from Books import *
 import sys
 import random
 
 DefaultSuccessRate = 0.001
 DefaultValuePerCcy = 1000
 
+# TODO: 封装以下类型
 TypeInstructions = List[Instruction]
 TypeAskBids = List[Tuple[int, Tuple[float, float]]]
 TypeBalance = Dict[str, float]
 TypeBalanceHist = List[Tuple[int, TypeBalance]]
-TypeBookItem = Tuple[float, float] # (价格, 委托量)
-TypeBook = Tuple[List[TypeBookItem], List[TypeBookItem]] # (Asks, Bids)
-TypeBooks = List[Tuple[int, TypeBook]] # (timestamp, TypeBook)
 
 class TestFactory:
     '''
@@ -23,17 +22,17 @@ class TestFactory:
     '''
     defaultPairsFilters = ['-USDC']
     def __init__(self, 
-                 testNum = 100,
-                 maxSec = 86400, 
-                 minSec = 1000, 
-                 secPerInst = 10,
-                 maxPairs = sys.maxsize,
-                 minPairs = 0,
-                 successRate = DefaultSuccessRate,
-                 destPath = './',
-                 instruments : List[Dict] = defaultInstruments,
-                 valuePerCcy : float = DefaultValuePerCcy,
-                 ) -> None:
+                testNum = 100,
+                maxSec = 86400, 
+                minSec = 1000, 
+                secPerInst = 10,
+                maxPairs = sys.maxsize,
+                minPairs = 0,
+                successRate = DefaultSuccessRate,
+                destPath = './',
+                instruments : List[Dict] = defaultInstruments,
+                valuePerCcy : float = DefaultValuePerCcy,
+                ) -> None:
         self.testNum : int = testNum # 生成的metatest的数量
         self.maxSec : int = maxSec # 最长回测时长(单位: 秒), 默认最长一天
         self.minSec : int = minSec # 最短回测时长(单位: 秒), 默认最短一小时
@@ -51,12 +50,15 @@ class TestFactory:
         '''
         self.destPath = newDestPath
     
-    def genPairs(self) -> List[str]:
+    def genPairs(self, num: Optional[int] = None) -> List[str]:
         '''
         随机生成回测涉及的交易对
         '''
         totalPairs = self.getTotalPairs()
-        k = random.randint(self.minPairs, self.maxPairs)
+        if num is None:
+            k = random.randint(self.minPairs, self.maxPairs)
+        else:
+            k = num
         result = random.sample(totalPairs, k)
         return result
     
@@ -64,16 +66,18 @@ class TestFactory:
         '''
         根据valuePerCcy生成策略的初始账户余额
         NOTICE: 目前只支持SPOT; 后续应该考虑随机化生成
+        TODO: 各个Ccy的初始余额应该随机化生成
         '''
         balance = {}
         totalCcy = self.getTotalCcy()
         lastPrices = get_lastPrice('SPOT')
         for ccy in totalCcy:
-            pair = '-'.join(ccy, 'USDT')
+            pair = '-'.join([ccy, 'USDT'])
             instrument = self.getInstrument(pair)
             price = lastPrices[pair]
             value = round(self.valuePerCcy/price, get_significant_digits(instrument['lotSz']))
             balance[pair] = value
+        return balance
     
     def genTime(self) -> Tuple[int, int]:
         '''
@@ -88,8 +92,8 @@ class TestFactory:
     def genInsts(self, time_period : Tuple[int, int]) -> TypeInstructions:
         '''
         随机生成一次回测中策略发出的交易指令
-        NOTICE: 只填充 instType 和 direct 字段
-        NOTICE: 只支持 MarketOrder 类型的交易指令
+        NOTICE: 只填充 ordType 和 side 字段
+        NOTICE: 目前只支持 MarketOrder 类型的交易指令
         '''
 
         # 确定交易指令的发出时刻和数量
@@ -102,10 +106,10 @@ class TestFactory:
         # 生成交易指令
         result = []
         for i in ts:
-            # instType = LimitOrder if random.randint(0,1) else MarketOrder
-            instType = MarketOrder # 暂时只支持市价单
-            direct = BUY if random.randint(0,1) else SELL
-            inst = Instruction(instType, direct, i)
+            # ordType = LimitOrder if random.randint(0,1) else MarketOrder
+            ordType = MARKETORDER # 暂时只支持市价单
+            side = BUY if random.randint(0,1) else SELL
+            inst = Instruction(ordType, side, i)
 
             # 随机决定该指令的交易对
             totalPairs = self.getTotalPairs(filters=['USDT-', 'USDC-'])
@@ -115,10 +119,11 @@ class TestFactory:
         return result
     
     def genAskBids(self, 
-                  pair: str, 
-                  p0: float, 
-                  time_period : Tuple[int, int], 
-                  sigma: float) -> TypeAskBids:
+                    pair: str, 
+                    p0: float, 
+                    time_period : Tuple[int, int], 
+                    sigma: float
+                    ) -> TypeAskBids:
         '''
         随机生成AskBid序列
         NOTICE: 生成的AskBid序列的一阶差分符合正态分布
@@ -134,13 +139,14 @@ class TestFactory:
             delta_percent = max(delta_percent, -0.8) # 最小的变化百分比为 -0.8
             delta_percent = min(delta_percent, 0.8) # 最小的变化百分比为 0.8
             
-            delta = prices[-1] * delta_percent # 变化绝对值
-            next_price = prices[-1] + delta
+            delta = prices[-1][1] * delta_percent # 变化绝对值
+            next_price = prices[-1][1] + delta
             prices.append((time_period[0]+1000*i, next_price))
         
         # 生成 ask 和 bid
         askbids = []
         for p in prices:
+            # FIXME: 这里生成的ask和bid间的价差通常只差一个tickSz
             gap_t = round(random.uniform(0, 0.01) * p[1], get_significant_digits(tickSz))
             price_gap = max(tickSz, gap_t) # 生成ask和bid间的价差
             bid = p[1]
@@ -150,9 +156,9 @@ class TestFactory:
         return askbids
     
     def fillInsts(self, 
-                  totalAskBids: Dict[str, TypeAskBids], 
-                  insts: TypeInstructions
-                  ) -> TypeInstructions:
+                totalAskBids: Dict[str, TypeAskBids], 
+                insts: TypeInstructions
+                ) -> TypeInstructions:
         '''
         填充交易指令的剩余部分
         NOTICE: 只支持 MarketOrder
@@ -163,14 +169,18 @@ class TestFactory:
                 此外, 不同的时刻的订单簿都是相互独立的, 彼此间没有连续性可言(这当然是不成立的, 
                 但用于测试回测系统的正确性应该是足够了)
         '''
-        prices = get_lastPrice()
+        prices = get_lastPrice('SPOT') # 目前只支持 SPOT
         for inst in insts:
             askbids = totalAskBids[inst.pair] # 选择指定的askbids
+            # FIXME: Remove the following assertion
+            assert len(list(filter(lambda x: x[0] == inst.ts, askbids))) == 1
             askbid = list(filter(lambda x: x[0] == inst.ts, askbids))[0]
-            if inst.direct == BUY:
-                inst.price = askbid[0]
+
+            # FIXME: 实际上, 对于市价单, 价格应该是没有意义的
+            if inst.side == BUY:
+                inst.price = askbid[1][0]
             else:
-                inst.price = askbid[1]
+                inst.price = askbid[1][1]
             
             # 随机生成委托量, 基准值为 10 USDT
             instrument = self.getInstrument(pair=inst.pair)
@@ -182,16 +192,16 @@ class TestFactory:
         return insts
 
     def calBalanceHist(self, 
-                       insts: TypeInstructions,
-                       original_balance: TypeBalance,
-                       ) -> TypeBalanceHist:
+                        insts: TypeInstructions,
+                        original_balance: TypeBalance,
+                        ) -> TypeBalanceHist:
         '''
         计算不同时刻下的Balance的值
         NOTICE: 当前只支持OKX的市价单手续费
         NOTICE: 当前只支持 SPOT
         '''
         commission = { # 手续费
-            MarketOrder: {
+            MARKETORDER: {
                 'MAKER': 0.0008,
                 'TAKER': 0.0010,
             }
@@ -199,27 +209,32 @@ class TestFactory:
         balanceHist: TypeBalanceHist = []
         nextBalance = deepcopy(original_balance)
         for inst in insts:
-            assert inst.instType == MarketOrder
-            baseCcy, quoteCcy = inst.pair.split('-')
-            if inst.direct == BUY: # get baseCcy
-                nextBalance[baseCcy] = (nextBalance[baseCcy] + inst.value)
-                nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MarketOrder]['TAKER']), \
-                                            self.getLotSz())
-                nextBalance[quoteCcy] = nextBalance[quoteCcy] - (inst.value*inst.price) # NOTICE: 也许需要进行舍入?
-            elif inst.direct == SELL: # get quoteCcy
+            # FIXME: Remove the following assertion
+            assert inst.ordType == MARKETORDER
+            baseCcy = inst.baseCcy
+            quoteCcy = inst.quoteCcy
+            if inst.side == BUY: # get baseCcy
+                nextBalance[baseCcy] = nextBalance[baseCcy] + inst.value
+                nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MARKETORDER]['TAKER']), \
+                                            get_significant_digits(self.getLotSz(inst.pair)))
+                nextBalance[quoteCcy] = nextBalance[quoteCcy] - (inst.value*inst.price) # FIXME: 也许需要进行舍入?
+
+            elif inst.side == SELL: # get quoteCcy
                 nextBalance[baseCcy] = nextBalance[baseCcy] - inst.value
-                nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # NOTICE: 也许需要进行舍入?
-            
-            balanceHist.append((inst.ts, deepcopy(nextBalance)))
+                nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # FIXME: 也许需要进行舍入?
+                nextBalance[quoteCcy] = nextBalance[quoteCcy]*(1-commission[MARKETORDER]['TAKER'])
+            else:
+                raise Exception('Unknown side: {}'.format(inst.side))
+            balanceHist.append((inst.ts, nextBalance))
         
         return balanceHist
 
     def genBooks(self, 
-                 time_period: Tuple[int, int],
-                 insts: TypeInstructions,
-                 askbids: TypeAskBids,
-                 pair: str,
-                 ) -> TypeBooks:
+                time_period: Tuple[int, int],
+                insts: TypeInstructions,
+                askbids: TypeAskBids,
+                pair: str,
+                ) -> Books:
         '''
         随机生成订单簿
         NOTICE: 当前只假定一个交易指令可以被一档订单消耗完成
@@ -228,25 +243,37 @@ class TestFactory:
         Depth = 20 # 订单簿深度
         time_range = int((time_period[1]-time_period[0])/1000) + 1
         
-        books = []
-        for t in time_range:
+        books = Books()
+        for t in range(time_range):
             askbid = askbids[t][1] # 卖一价; 买一价
-            assert askbid[t][0] == 1000*t + time_period[0]
-            inst = self.getInstructions(t, insts)
-            if inst == None: # 该时间戳下不存在交易指令; 随机生成整个订单簿
-                ask_ps = generate_order_seq(askbid[0], 2, Depth)
-                bid_ps = generate_order_seq(askbid[1], 2, Depth, False)
-                ask_v = generate_random_seq(10, 10/3, Depth, self.getLotSz(pair), self.getMinSz(pair))
-                bid_v = generate_random_seq(10, 10/3, Depth, self.getLotSz(pair), self.getMinSz(pair))
-                asks = []
-                bids = []
-                for i in range(Depth):
-                    asks.append((ask_ps[i], ask_v[i]))
-                    bids.append((bid_ps[i], bid_v[i]))
-                books.append((1000*t + time_period[0], (asks, bids)))
-            elif inst.pair == pair: # 该时间戳下存在对应交易对的交易指令
-                
-                    
+            assert askbids[t][0] == 1000*t + time_period[0]
+            # FIXME: Remove the following assertion
+            filtered_insts = list(filter(lambda x: x.ts == askbids[t][0], insts))
+            assert len(filtered_insts) <= 1
+            if len(filtered_insts) == 1:
+                inst = filtered_insts[0]
+            else:
+                continue
+            asks = []
+            bids = []
+            if inst.pair == pair: # 该时间戳下存在对应交易对的交易指令
+                if inst.side == BUY:
+                    asks.append((inst.price, inst.value))
+                else:
+                    bids.append((inst.price, inst.value))
+            ask_ps = generate_order_seq(askbid[0], 2, Depth-len(asks))
+            bid_ps = generate_order_seq(askbid[1], 2, Depth-len(bids), False)
+            ask_v = generate_random_seq(10, 10/3, Depth-len(asks), self.getLotSz(pair), self.getMinSz(pair))
+            bid_v = generate_random_seq(10, 10/3, Depth-len(bids), self.getLotSz(pair), self.getMinSz(pair))
+            for i in range(Depth-len(asks)):
+                asks.append((ask_ps[i], ask_v[i]))
+            for i in range(Depth-len(bids)):
+                bids.append((bid_ps[i], bid_v[i]))
+            
+            books.add_slice(1000*t + time_period[0], asks, bids)
+
+        return books
+
     def getTotalPairs(self, filters: List[str] = []) -> List[str]:
         '''
         获取全体交易对
@@ -257,7 +284,7 @@ class TestFactory:
             result = []
             for pair in totalPairs:
                 for filter in all_filters:
-                    if filter not in pair:
+                    if filter not in pair: # TODO: 修改过滤的逻辑
                         result.append(pair)
                         break
             return result
@@ -271,7 +298,7 @@ class TestFactory:
         result = set()
         totalPairs = self.getTotalPairs()
         for pair in totalPairs:
-            baseCcy, quoteCcy = pair.split('-')
+            baseCcy, quoteCcy = pair.split('-')[:2]
             result.add(baseCcy)
             result.add(quoteCcy)
         
@@ -304,12 +331,3 @@ class TestFactory:
         '''
         return list(filter(lambda x: x['instId']==pair, self.instruments))[0]
     
-    def getInstructions(self, ts: int, instructions: TypeInstructions) -> Instruction:
-        '''
-        获取指定时间戳的交易指令, 如果不存在, 返回 None
-        '''
-        for inst in instructions:
-            if inst.ts == ts:
-                return inst
-        
-        return None # 不存在则返回 None
