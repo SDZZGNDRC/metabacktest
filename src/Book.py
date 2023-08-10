@@ -39,8 +39,9 @@ class BookSlice:
         self.bids = [x for x in self.bids if x.size > 0]
 
 
-class Books:
-    def __init__(self) -> None:
+class Book:
+    def __init__(self, pair: str) -> None:
+        self.pair: str = pair
         self.slices: List[Tuple[int, BookSlice]] = []
     
     def add_slice(self, timestamp: int, asks: List[Tuple[float, float]], bids: List[Tuple[float, float]]) -> None:

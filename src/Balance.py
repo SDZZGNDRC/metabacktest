@@ -19,6 +19,10 @@ class Balance:
     def in_USD(self) -> float:
         '''TODO: Calculate total USD value of all currencies'''
         return -1.0
+    
+    def __str__(self) -> str:
+        sorted_balances = sorted(self._balances.items(), key=lambda x: x[0], reverse=False)
+        return str(dict(sorted_balances))
 
 
 class BalancesHistory:
@@ -28,3 +32,14 @@ class BalancesHistory:
     def append(self, timestamp: int, balance: Balance) -> None:
         self.slice.append((timestamp, balance))
         self.slice.sort(key=lambda x: x[0], reverse=False)
+    
+    
+    def at(self, timestamp: int) -> Balance:
+        for i in range(len(self.slice)):
+            if self.slice[i][0] > timestamp:
+                return self.slice[i-1][1]
+        raise ValueError(f"Timestamp {timestamp} is out of range")
+    
+    def __str__(self) -> str:
+        self.slice.sort(key=lambda x: x[0], reverse=False)
+        return str({x[0]: str(x[1]) for x in self.slice})

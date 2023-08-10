@@ -1,9 +1,11 @@
 from copy import deepcopy
 from typing import List, Dict, Optional, Set, Tuple
+from TestCase import TestCase
 from utils.instruments import defaultInstruments
 from utils.helper import *
 from instruction import *
-from Books import *
+from Book import *
+from Balance import *
 import sys
 import random
 
@@ -11,10 +13,7 @@ DefaultSuccessRate = 0.001
 DefaultValuePerCcy = 1000
 
 # TODO: 封装以下类型
-TypeInstructions = List[Instruction]
 TypeAskBids = List[Tuple[int, Tuple[float, float]]]
-TypeBalance = Dict[str, float]
-TypeBalanceHist = List[Tuple[int, TypeBalance]]
 
 class TestFactory:
     '''
@@ -44,31 +43,13 @@ class TestFactory:
         self.instruments = instruments # 产品信息
         self.valuePerCcy = valuePerCcy # Balance中每个币种初始额度(单位: USDT)
     
-    def setDestPath(self, newDestPath : str):
-        '''
-        设置测例存放的路径
-        '''
-        self.destPath = newDestPath
-    
-    def genPairs(self, num: Optional[int] = None) -> List[str]:
-        '''
-        随机生成回测涉及的交易对
-        '''
-        totalPairs = self.getTotalPairs()
-        if num is None:
-            k = random.randint(self.minPairs, self.maxPairs)
-        else:
-            k = num
-        result = random.sample(totalPairs, k)
-        return result
-    
-    def genBalance(self) -> TypeBalance:
+    def genBalance(self) -> Balance:
         '''
         根据valuePerCcy生成策略的初始账户余额
         NOTICE: 目前只支持SPOT; 后续应该考虑随机化生成
         TODO: 各个Ccy的初始余额应该随机化生成
         '''
-        balance = {}
+        balance = Balance()
         totalCcy = self.getTotalCcy()
         lastPrices = get_lastPrice('SPOT')
         for ccy in totalCcy:
@@ -79,7 +60,7 @@ class TestFactory:
             balance[pair] = value
         return balance
     
-    def genTime(self) -> Tuple[int, int]:
+    def genBackTestPeriod(self) -> Tuple[int, int]:
         '''
         随机生成一个回测的开始和结束时间, 时间粒度为 1 sec.
         使用Unix毫秒级时间戳表示
@@ -89,7 +70,7 @@ class TestFactory:
         end = start + length*1000
         return (start, end)
     
-    def genInsts(self, time_period : Tuple[int, int]) -> TypeInstructions:
+    def genInsts(self, time_period : Tuple[int, int]) -> List[Instruction]:
         '''
         随机生成一次回测中策略发出的交易指令
         NOTICE: 只填充 ordType 和 side 字段
@@ -122,7 +103,7 @@ class TestFactory:
                     pair: str, 
                     p0: float, 
                     time_period : Tuple[int, int], 
-                    sigma: float
+                    sigma: float = 1.0
                     ) -> TypeAskBids:
         '''
         随机生成AskBid序列
@@ -157,8 +138,8 @@ class TestFactory:
     
     def fillInsts(self, 
                 totalAskBids: Dict[str, TypeAskBids], 
-                insts: TypeInstructions
-                ) -> TypeInstructions:
+                insts: List[Instruction]
+                ) -> List[Instruction]:
         '''
         填充交易指令的剩余部分
         NOTICE: 只支持 MarketOrder
@@ -192,9 +173,9 @@ class TestFactory:
         return insts
 
     def calBalanceHist(self, 
-                        insts: TypeInstructions,
-                        original_balance: TypeBalance,
-                        ) -> TypeBalanceHist:
+                        insts: List[Instruction],
+                        original_balance: Balance,
+                        ) -> BalancesHistory:
         '''
         计算不同时刻下的Balance的值
         NOTICE: 当前只支持OKX的市价单手续费
@@ -206,7 +187,7 @@ class TestFactory:
                 'TAKER': 0.0010,
             }
         }
-        balanceHist: TypeBalanceHist = []
+        balanceHist = BalancesHistory()
         nextBalance = deepcopy(original_balance)
         for inst in insts:
             # FIXME: Remove the following assertion
@@ -225,16 +206,16 @@ class TestFactory:
                 nextBalance[quoteCcy] = nextBalance[quoteCcy]*(1-commission[MARKETORDER]['TAKER'])
             else:
                 raise Exception('Unknown side: {}'.format(inst.side))
-            balanceHist.append((inst.ts, nextBalance))
+            balanceHist.append(inst.ts, nextBalance)
         
         return balanceHist
 
-    def genBooks(self, 
+    def genBook(self, 
                 time_period: Tuple[int, int],
-                insts: TypeInstructions,
+                insts: List[Instruction],
                 askbids: TypeAskBids,
                 pair: str,
-                ) -> Books:
+                ) -> Book:
         '''
         随机生成订单簿
         NOTICE: 当前只假定一个交易指令可以被一档订单消耗完成
@@ -243,7 +224,7 @@ class TestFactory:
         Depth = 20 # 订单簿深度
         time_range = int((time_period[1]-time_period[0])/1000) + 1
         
-        books = Books()
+        books = Book(pair)
         for t in range(time_range):
             askbid = askbids[t][1] # 卖一价; 买一价
             assert askbids[t][0] == 1000*t + time_period[0]
@@ -330,4 +311,37 @@ class TestFactory:
         获取指定交易对的信息
         '''
         return list(filter(lambda x: x['instId']==pair, self.instruments))[0]
-    
+
+    def produce(self) -> TestCase:
+        '''produce a test case'''
+        bt_period = self.genBackTestPeriod()
+        insts = self.genInsts(bt_period)
+        total_pairs = set([inst.pair for inst in insts])
+        lastPrices = get_lastPrice('SPOT') # FIXME: 仅支持 SPOT
+        p0s = {pair: lastPrices[pair] for pair in total_pairs}
+        askbids = {pair: self.genAskBids(pair, p0s[pair], bt_period) for pair in total_pairs}
+        insts = self.fillInsts(askbids, insts)
+        books: Dict[str, Book] = {}
+        # generate books
+        for pair in total_pairs:
+            askbids = self.genAskBids(pair, p0s[pair], bt_period)
+            book = self.genBook(bt_period, insts, askbids, pair)
+            books[pair] = book
+        
+        original_balance = self.genBalance()
+        referredBalances = self.calBalanceHist(insts, original_balance)
+
+        return TestCase(books, insts, referredBalances)
+
+
+    def genPairs(self, num: Optional[int] = None) -> List[str]:
+        '''
+        随机生成回测涉及的交易对
+        '''
+        totalPairs = self.getTotalPairs()
+        if num is None:
+            k = random.randint(self.minPairs, self.maxPairs)
+        else:
+            k = num
+        result = random.sample(totalPairs, k)
+        return result
