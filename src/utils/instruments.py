@@ -2,6 +2,8 @@ from typing import List
 import json
 import sys
 
+from utils.helper import get_instruments
+
 '''
 命令行参数: 原始数据的路径, 目标文件的路径
 该脚本主要用于将原始的GET /api/v5/public/instruments?instId=SPOT数据提取特定的字段到指定的文件
@@ -25,13 +27,14 @@ def extract(filePath: str, toPath = None) -> List[dict]:
         d['minSz'] = i['minSz']
         d['state'] = i['state']
         result.append(d)
-    if toPath == None:
+    if toPath != None:
         final_data = {'instruments': result}
         with open(toPath, 'w', encoding='utf-8') as f:
             f.write(json.dumps(final_data, indent=4))
     return result
 
-defaultInstruments = extract('D:\\projects\\metabacktest\\tmp\\raw-okx-instruments-SPOT.json')
+# defaultInstruments = extract(r'D:\Project\metabacktest\tmp\raw-okx-instruments-SPOT.json')
+defaultInstruments = get_instruments('SPOT')['data']
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:

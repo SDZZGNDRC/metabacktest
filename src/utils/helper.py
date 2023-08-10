@@ -10,21 +10,24 @@ proxies = {
 
 def get_significant_digits(num : Union[str, float]) -> int:
     '''
-    给定形如0.0001的数字(字符串), 判断它的有效位数
+    Given a number like 0.0001 (string), determine its number of significant digits
     '''
     try:
-        float(num)
+        float_num = float(num)
     except ValueError:
         return -1 # Invalid Input
-    
-    # FIXME: 对于极小的float, 字符串后可能使用科学计数法表示, 例如1e-8, 此时会出错
-    str_num = str(num)
-    if 'e' in str_num:
-        raise ValueError(f'Invalid Input: {num} -> {str_num}')
+
+    # Handle scientific notation
+    if 'e' in str(num):
+        str_num = "{:f}".format(float_num).rstrip('0')
+    else:
+        str_num = str(num).rstrip('0') # Remove trailing zeros
+
     if '.' not in str_num:
-        return -1 * (len(str_num)-1)
-    str_num = str_num.rstrip('0')  # 去除末尾的零
-    return len(str_num) - str_num.index('.') - 1
+        return len(str_num.lstrip('0')) # Count digits in integer part
+    else:
+        str_num = str_num.rstrip('0') # Remove trailing zeros after decimal point
+        return len(str_num) - str_num.index('.') - 1
 
 def get_tickers(instType: str) -> List:
     '''
@@ -40,6 +43,13 @@ def get_tickers(instType: str) -> List:
     }
     response = requests.get('https://www.okx.com/api/v5/market/tickers', params=params, proxies=proxies)
     return json.loads(response.text)['data']
+
+def get_instruments(instType: str) -> Dict:
+    params = {
+        'instType': instType,
+    }
+    response  = requests.get('https://www.okx.com/api/v5/public/instruments', params=params, proxies=proxies)
+    return response.json()
 
 def get_lastPrice(instType: str) -> Dict[str, float]:
     '''
@@ -61,7 +71,7 @@ def generate_random_valueInt(v0, deviation) -> int:
     x = random.uniform(-delta, delta) # 均匀分布
     return int(v0 + x)
 
-def generate_order_seq(a0, step, count, is_increasing: bool = True) -> List[float]:
+def generate_order_seq(a0, step, count, minPs, is_increasing: bool = True) -> List[float]:
     '''
     随机生成一串以a0为首项的递增或递减的随机数序列
     '''
@@ -75,6 +85,7 @@ def generate_order_seq(a0, step, count, is_increasing: bool = True) -> List[floa
             if delta != 0:
                 break
         a = seq[-1] + delta
+        a = max(minPs, a)
         seq.append(a)
     return seq
 

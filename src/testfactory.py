@@ -43,34 +43,45 @@ class TestFactory:
         self.instruments = instruments # 产品信息
         self.valuePerCcy = valuePerCcy # Balance中每个币种初始额度(单位: USDT)
     
-    def genBalance(self) -> Balance:
+    def genBalance(self, pairs: List[str]) -> Balance:
         '''
         根据valuePerCcy生成策略的初始账户余额
         NOTICE: 目前只支持SPOT; 后续应该考虑随机化生成
         TODO: 各个Ccy的初始余额应该随机化生成
         '''
         balance = Balance()
-        totalCcy = self.getTotalCcy()
+        totalCcy = set()
+        for pair in pairs:
+            ccy1, ccy2 = pair.split('-')[:2]
+            totalCcy.add(ccy1)
+            totalCcy.add(ccy2)
+        
         lastPrices = get_lastPrice('SPOT')
         for ccy in totalCcy:
+            # TODO: 这里的逻辑需要优化
+            if ccy in ['USDT', 'USDC']:
+                balance[ccy] = self.valuePerCcy
+                continue
+
             pair = '-'.join([ccy, 'USDT'])
             instrument = self.getInstrument(pair)
             price = lastPrices[pair]
             value = round(self.valuePerCcy/price, get_significant_digits(instrument['lotSz']))
-            balance[pair] = value
+            balance[ccy] = value
         return balance
     
-    def genBackTestPeriod(self) -> Tuple[int, int]:
+    def genBackTestPeriod(self, point: int = 5000) -> Tuple[int, int]:
         '''
         随机生成一个回测的开始和结束时间, 时间粒度为 1 sec.
         使用Unix毫秒级时间戳表示
         '''
         start = 1684154233000 # 由于在回测中, 时间段所在的位置并没有什么影响, 故而可以固定为一个值
-        length = random.randint(self.minSec, self.maxSec) # 随机决定回测的时间长度
+        # length = random.randint(self.minSec, self.maxSec) # 随机决定回测的时间长度
+        length = point
         end = start + length*1000
         return (start, end)
     
-    def genInsts(self, time_period : Tuple[int, int]) -> List[Instruction]:
+    def genInsts(self, time_period : Tuple[int, int], pairs: List[str]) -> List[Instruction]:
         '''
         随机生成一次回测中策略发出的交易指令
         NOTICE: 只填充 ordType 和 side 字段
@@ -93,8 +104,8 @@ class TestFactory:
             inst = Instruction(ordType, side, i)
 
             # 随机决定该指令的交易对
-            totalPairs = self.getTotalPairs(filters=['USDT-', 'USDC-'])
-            inst.pair = random.choice(totalPairs)
+            # totalPairs = self.getTotalPairs(filters=['USDT-', 'USDC-'])
+            inst.pair = random.choice(pairs)
             result.append(inst)
         
         return result
@@ -195,13 +206,24 @@ class TestFactory:
             baseCcy = inst.baseCcy
             quoteCcy = inst.quoteCcy
             if inst.side == BUY: # get baseCcy
+                
+                # Check if the balance is enough
+                traded_quoteCcy = nextBalance[quoteCcy] - (inst.value*inst.price)
+                if traded_quoteCcy < 0:
+                    continue
+                
                 nextBalance[baseCcy] = nextBalance[baseCcy] + inst.value
                 nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MARKETORDER]['TAKER']), \
                                             get_significant_digits(self.getLotSz(inst.pair)))
-                nextBalance[quoteCcy] = nextBalance[quoteCcy] - (inst.value*inst.price) # FIXME: 也许需要进行舍入?
+                nextBalance[quoteCcy] = traded_quoteCcy # FIXME: 也许需要进行舍入?
 
             elif inst.side == SELL: # get quoteCcy
-                nextBalance[baseCcy] = nextBalance[baseCcy] - inst.value
+                
+                # Check if the balance is enough
+                traded_baseCcy = nextBalance[baseCcy] - inst.value
+                if traded_baseCcy < 0:
+                    continue
+                nextBalance[baseCcy] = traded_baseCcy
                 nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # FIXME: 也许需要进行舍入?
                 nextBalance[quoteCcy] = nextBalance[quoteCcy]*(1-commission[MARKETORDER]['TAKER'])
             else:
@@ -242,8 +264,8 @@ class TestFactory:
                     asks.append((inst.price, inst.value))
                 else:
                     bids.append((inst.price, inst.value))
-            ask_ps = generate_order_seq(askbid[0], 2, Depth-len(asks))
-            bid_ps = generate_order_seq(askbid[1], 2, Depth-len(bids), False)
+            ask_ps = generate_order_seq(askbid[0], 2, Depth-len(asks), self.getTickSz(pair))
+            bid_ps = generate_order_seq(askbid[1], 2, Depth-len(bids), self.getTickSz(pair), False)
             ask_v = generate_random_seq(10, 10/3, Depth-len(asks), self.getLotSz(pair), self.getMinSz(pair))
             bid_v = generate_random_seq(10, 10/3, Depth-len(bids), self.getLotSz(pair), self.getMinSz(pair))
             for i in range(Depth-len(asks)):
@@ -310,12 +332,16 @@ class TestFactory:
         '''
         获取指定交易对的信息
         '''
-        return list(filter(lambda x: x['instId']==pair, self.instruments))[0]
+        filtered_instruments = list(filter(lambda x: x['instId']==pair, self.instruments))
+        if len(filtered_instruments) == 0:
+            raise Exception('No such instrument: {}'.format(pair))
+        return filtered_instruments[0]
 
     def produce(self) -> TestCase:
         '''produce a test case'''
         bt_period = self.genBackTestPeriod()
-        insts = self.genInsts(bt_period)
+        pairs = self.genPairs(1, ['USDT-', 'USDC-'])
+        insts = self.genInsts(bt_period, pairs)
         total_pairs = set([inst.pair for inst in insts])
         lastPrices = get_lastPrice('SPOT') # FIXME: 仅支持 SPOT
         p0s = {pair: lastPrices[pair] for pair in total_pairs}
@@ -323,22 +349,24 @@ class TestFactory:
         insts = self.fillInsts(askbids, insts)
         books: Dict[str, Book] = {}
         # generate books
-        for pair in total_pairs:
+        print('Total pairs:', len(total_pairs))
+        for index, pair in enumerate(total_pairs):
             askbids = self.genAskBids(pair, p0s[pair], bt_period)
             book = self.genBook(bt_period, insts, askbids, pair)
             books[pair] = book
+            print(f'finish generating book for {pair} -> {index+1}/{len(total_pairs)}')
         
-        original_balance = self.genBalance()
+        original_balance = self.genBalance(pairs)
         referredBalances = self.calBalanceHist(insts, original_balance)
 
         return TestCase(books, insts, referredBalances)
 
 
-    def genPairs(self, num: Optional[int] = None) -> List[str]:
+    def genPairs(self, num: Optional[int] = None, filters: List[str] = []) -> List[str]:
         '''
         随机生成回测涉及的交易对
         '''
-        totalPairs = self.getTotalPairs()
+        totalPairs = self.getTotalPairs(filters)
         if num is None:
             k = random.randint(self.minPairs, self.maxPairs)
         else:

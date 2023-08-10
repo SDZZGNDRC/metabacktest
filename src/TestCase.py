@@ -1,7 +1,7 @@
 from typing import Dict, List, Tuple
 from Book import Book
 from instruction import Instruction
-from src.Balance import BalancesHistory
+from Balance import BalancesHistory
 
 class TestCase:
     
