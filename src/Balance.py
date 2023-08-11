@@ -1,3 +1,4 @@
+from copy import deepcopy
 from typing import List, Dict, Tuple
 from utils.helper import validate_currency
 
@@ -25,7 +26,7 @@ class Balance:
         return str(dict(sorted_balances))
 
     def asdict(self):
-        return self._balances
+        return deepcopy(self._balances)
 
 class BalancesHistory:
     def __init__(self) -> None:
@@ -48,3 +49,22 @@ class BalancesHistory:
 
     def asdict(self):
         return {x[0]: x[1].asdict() for x in self.slice}
+    
+    def __getitem__(self, index: int) -> Tuple[int, Balance]:
+        return self.slice[index]
+    
+    def __len__(self) -> int:
+        return len(self.slice)
+
+def test_Balance():
+    b = Balance()
+    b['BTC'] = 1.0
+    assert b['BTC'] == 1.0
+    b['BTC'] = 3.0
+    assert b['BTC'] == 3.0
+    
+    new_balance = deepcopy(b)
+    
+    new_balance['BTC'] = 2.0
+    assert new_balance['BTC'] == 2.0
+    assert b['BTC'] == 3.0

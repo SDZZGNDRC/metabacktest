@@ -128,8 +128,8 @@ class TestFactory:
         prices = [(time_period[0], p0)]
         for i in range(1, time_range):
             delta_percent = random.normalvariate(0, sigma) # 变化百分比, 符合正态分布
-            delta_percent = max(delta_percent, -0.8) # 最小的变化百分比为 -0.8
-            delta_percent = min(delta_percent, 0.8) # 最小的变化百分比为 0.8
+            delta_percent = max(delta_percent, -0.03) # 限制变化范围
+            delta_percent = min(delta_percent, 0.03)
             
             delta = prices[-1][1] * delta_percent # 变化绝对值
             next_price = prices[-1][1] + delta
@@ -199,10 +199,12 @@ class TestFactory:
             }
         }
         balanceHist = BalancesHistory()
-        nextBalance = deepcopy(original_balance)
+        balanceHist.append(0, original_balance)
+        traded_num = 0
         for inst in insts:
             # FIXME: Remove the following assertion
             assert inst.ordType == MARKETORDER
+            nextBalance = deepcopy(balanceHist[-1][1])            
             baseCcy = inst.baseCcy
             quoteCcy = inst.quoteCcy
             if inst.side == BUY: # get baseCcy
@@ -211,7 +213,9 @@ class TestFactory:
                 traded_quoteCcy = nextBalance[quoteCcy] - (inst.value*inst.price)
                 if traded_quoteCcy < 0:
                     continue
-                
+                else:
+                    traded_num += 1
+                # print(f'delta: {(inst.value*inst.price)}')
                 nextBalance[baseCcy] = nextBalance[baseCcy] + inst.value
                 nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MARKETORDER]['TAKER']), \
                                             get_significant_digits(self.getLotSz(inst.pair)))
@@ -223,13 +227,18 @@ class TestFactory:
                 traded_baseCcy = nextBalance[baseCcy] - inst.value
                 if traded_baseCcy < 0:
                     continue
+                else:
+                    traded_num += 1
+                # print(f'delta: {inst.value}')
                 nextBalance[baseCcy] = traded_baseCcy
                 nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # FIXME: 也许需要进行舍入?
                 nextBalance[quoteCcy] = nextBalance[quoteCcy]*(1-commission[MARKETORDER]['TAKER'])
             else:
                 raise Exception('Unknown side: {}'.format(inst.side))
+
             balanceHist.append(inst.ts, nextBalance)
         
+        print('Traded number: {}'.format(traded_num))
         return balanceHist
 
     def genBook(self, 
@@ -264,10 +273,10 @@ class TestFactory:
                     asks.append((inst.price, inst.value))
                 else:
                     bids.append((inst.price, inst.value))
-            ask_ps = generate_order_seq(askbid[0], 2, Depth-len(asks), self.getTickSz(pair))
-            bid_ps = generate_order_seq(askbid[1], 2, Depth-len(bids), self.getTickSz(pair), False)
-            ask_v = generate_random_seq(10, 10/3, Depth-len(asks), self.getLotSz(pair), self.getMinSz(pair))
-            bid_v = generate_random_seq(10, 10/3, Depth-len(bids), self.getLotSz(pair), self.getMinSz(pair))
+            ask_ps = generate_order_seq(askbid[0], 1, Depth-len(asks), self.getTickSz(pair))
+            bid_ps = generate_order_seq(askbid[1], 1, Depth-len(bids), self.getTickSz(pair), False)
+            ask_v = generate_random_seq(1, 1/3, Depth-len(asks), self.getLotSz(pair), self.getMinSz(pair))
+            bid_v = generate_random_seq(1, 1/3, Depth-len(bids), self.getLotSz(pair), self.getMinSz(pair))
             for i in range(Depth-len(asks)):
                 asks.append((ask_ps[i], ask_v[i]))
             for i in range(Depth-len(bids)):
@@ -351,8 +360,7 @@ class TestFactory:
         # generate books
         print('Total pairs:', len(total_pairs))
         for index, pair in enumerate(total_pairs):
-            askbids = self.genAskBids(pair, p0s[pair], bt_period)
-            book = self.genBook(bt_period, insts, askbids, pair)
+            book = self.genBook(bt_period, insts, askbids[pair], pair)
             books[pair] = book
             print(f'finish generating book for {pair} -> {index+1}/{len(total_pairs)}')
         
@@ -373,3 +381,9 @@ class TestFactory:
             k = num
         result = random.sample(totalPairs, k)
         return result
+    
+
+if __name__ == '__main__':
+    tf = TestFactory()
+    tc = tf.produce(1)
+    tc.to_files('./testcase.json')

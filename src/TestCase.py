@@ -18,7 +18,7 @@ class TestCase:
     
     def to_files(self, path) -> None:
         with open(path, 'w') as f:
-            json.dump(self.asdict(), f)
+            json.dump(self.asdict(), f, indent=4)
     
     def asdict(self) -> Dict[str, Any]:
         return {
