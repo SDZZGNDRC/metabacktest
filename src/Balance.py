@@ -24,6 +24,8 @@ class Balance:
         sorted_balances = sorted(self._balances.items(), key=lambda x: x[0], reverse=False)
         return str(dict(sorted_balances))
 
+    def asdict(self):
+        return self._balances
 
 class BalancesHistory:
     def __init__(self) -> None:
@@ -43,3 +45,6 @@ class BalancesHistory:
     def __str__(self) -> str:
         self.slice.sort(key=lambda x: x[0], reverse=False)
         return str({x[0]: str(x[1]) for x in self.slice})
+
+    def asdict(self):
+        return {x[0]: x[1].asdict() for x in self.slice}

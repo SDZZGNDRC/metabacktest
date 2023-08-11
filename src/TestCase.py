@@ -1,4 +1,5 @@
-from typing import Dict, List, Tuple
+import json
+from typing import Dict, List, Tuple, Any
 from Book import Book
 from instruction import Instruction
 from Balance import BalancesHistory
@@ -16,4 +17,12 @@ class TestCase:
     
     
     def to_files(self, path) -> None:
-        pass
+        with open(path, 'w') as f:
+            json.dump(self.asdict(), f)
+    
+    def asdict(self) -> Dict[str, Any]:
+        return {
+            'books': {k: v.asdict() for k, v in self.books.items()},
+            'insts': [x.asdict() for x in self.insts],
+            'referredBalance': self.referredBalance.asdict()
+        }

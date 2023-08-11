@@ -28,3 +28,13 @@ class Instruction:
     @property
     def quoteCcy(self) -> str:
         return self.pair.split('-')[1]
+    
+    def asdict(self):
+        return {
+            'ordType': self.ordType,
+            'side': self.side,
+            'ts': self.ts,
+            'price': self.price,
+            'value': self.value,
+            'pair': self.pair
+        }

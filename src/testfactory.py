@@ -337,10 +337,10 @@ class TestFactory:
             raise Exception('No such instrument: {}'.format(pair))
         return filtered_instruments[0]
 
-    def produce(self) -> TestCase:
+    def produce(self, num_pairs: int = 3) -> TestCase:
         '''produce a test case'''
         bt_period = self.genBackTestPeriod()
-        pairs = self.genPairs(1, ['USDT-', 'USDC-'])
+        pairs = self.genPairs(num_pairs, ['USDT-', 'USDC-'])
         insts = self.genInsts(bt_period, pairs)
         total_pairs = set([inst.pair for inst in insts])
         lastPrices = get_lastPrice('SPOT') # FIXME: 仅支持 SPOT

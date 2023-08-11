@@ -38,6 +38,11 @@ class BookSlice:
         self.asks = [x for x in self.asks if x.size > 0]
         self.bids = [x for x in self.bids if x.size > 0]
 
+    def asdict(self):
+        return {
+            "asks": [str(x) for x in self.asks],
+            "bids": [str(x) for x in self.bids]
+        }
 
 class Book:
     def __init__(self, pair: str) -> None:
@@ -64,4 +69,11 @@ class Book:
     
     def __iter__(self):
         return iter(self.slices)
+    
+    
+    def asdict(self):
+        return {
+            "pair": self.pair,
+            "slices": {x[0]: x[1].asdict() for x in self.slices}
+        }
 
