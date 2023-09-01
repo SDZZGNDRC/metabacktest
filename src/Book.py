@@ -1,3 +1,4 @@
+from copy import deepcopy
 from typing import List, Dict, Tuple
 
 class BookItem:
@@ -37,6 +38,13 @@ class BookSlice:
     def remove_zero_size(self) -> None:
         self.asks = [x for x in self.asks if x.size > 0]
         self.bids = [x for x in self.bids if x.size > 0]
+    
+    
+    def set_zero(self) -> None:
+        for item in self.asks:
+            item.size = 0
+        for item in self.bids:
+            item.size = 0
 
     def asdict(self):
         return {
@@ -50,7 +58,17 @@ class Book:
         self.slices: List[Tuple[int, BookSlice]] = []
     
     def add_slice(self, timestamp: int, asks: List[Tuple[float, float]], bids: List[Tuple[float, float]]) -> None:
-        new_slice = BookSlice(asks, bids)
+        last_slice = deepcopy(self.slices[-1][1]) if len(self.slices) > 0 else None
+        if last_slice:
+            last_slice.remove_zero_size()
+            last_slice.set_zero()
+            new_slice = last_slice
+            for ask in asks:
+                new_slice.add_ask(ask[0], ask[1])
+            for bid in bids:
+                new_slice.add_bid(bid[0], bid[1])
+        else:
+            new_slice = BookSlice(asks, bids)
         self.slices.append((timestamp, new_slice))
         self.slices.sort(key=lambda x: x[0], reverse=False)
     

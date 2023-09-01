@@ -91,7 +91,7 @@ class TestFactory:
         # 确定交易指令的发出时刻和数量
         ts = []
         t = time_period[0]
-        while t <= time_period[1]:
+        while t < time_period[1]:
             ts.append(t)
             t = t + 1000*generate_random_valueInt(self.secPerInst, 0.5) # 随机生成间隔, 基准为secPerInst, 最大偏离50%
         
@@ -215,9 +215,10 @@ class TestFactory:
                     continue
                 else:
                     traded_num += 1
-                # print(f'delta: {(inst.value*inst.price)}')
-                nextBalance[baseCcy] = nextBalance[baseCcy] + inst.value
-                nextBalance[baseCcy] = round(nextBalance[baseCcy]*(1-commission[MARKETORDER]['TAKER']), \
+                get_amount = inst.value * (1-commission[MARKETORDER]['TAKER'])
+                nextBalance[baseCcy] = nextBalance[baseCcy] + get_amount
+                print(f'nextBalance[baseCcy]: {nextBalance[baseCcy]}, inst.value: {inst.value}')
+                nextBalance[baseCcy] = round(nextBalance[baseCcy], \
                                             get_significant_digits(self.getLotSz(inst.pair)))
                 nextBalance[quoteCcy] = traded_quoteCcy # FIXME: 也许需要进行舍入?
 
@@ -229,16 +230,16 @@ class TestFactory:
                     continue
                 else:
                     traded_num += 1
-                # print(f'delta: {inst.value}')
                 nextBalance[baseCcy] = traded_baseCcy
-                nextBalance[quoteCcy] = nextBalance[quoteCcy] + (inst.value*inst.price) # FIXME: 也许需要进行舍入?
-                nextBalance[quoteCcy] = nextBalance[quoteCcy]*(1-commission[MARKETORDER]['TAKER'])
+                print(f'{inst.price}: {inst.value}')
+                get_amount = inst.value * inst.price * (1-commission[MARKETORDER]['TAKER'])
+                nextBalance[quoteCcy] = nextBalance[quoteCcy] + get_amount # FIXME: 也许需要进行舍入?
             else:
                 raise Exception('Unknown side: {}'.format(inst.side))
 
             balanceHist.append(inst.ts, nextBalance)
         
-        print('Traded number: {}'.format(traded_num))
+        print('Trading rate: {}'.format(traded_num/len(insts)))
         return balanceHist
 
     def genBook(self, 
@@ -254,7 +255,6 @@ class TestFactory:
         '''
         Depth = 20 # 订单簿深度
         time_range = int((time_period[1]-time_period[0])/1000) + 1
-        
         books = Book(pair)
         for t in range(time_range):
             askbid = askbids[t][1] # 卖一价; 买一价
@@ -268,11 +268,13 @@ class TestFactory:
                 continue
             asks = []
             bids = []
-            if inst.pair == pair: # 该时间戳下存在对应交易对的交易指令
-                if inst.side == BUY:
-                    asks.append((inst.price, inst.value))
-                else:
-                    bids.append((inst.price, inst.value))
+            if inst.pair != pair:
+                continue
+            
+            if inst.side == BUY:
+                asks.append((inst.price, inst.value))
+            else:
+                bids.append((inst.price, inst.value))
             ask_ps = generate_order_seq(askbid[0], 1, Depth-len(asks), self.getTickSz(pair))
             bid_ps = generate_order_seq(askbid[1], 1, Depth-len(bids), self.getTickSz(pair), False)
             ask_v = generate_random_seq(1, 1/3, Depth-len(asks), self.getLotSz(pair), self.getMinSz(pair))
@@ -281,6 +283,8 @@ class TestFactory:
                 asks.append((ask_ps[i], ask_v[i]))
             for i in range(Depth-len(bids)):
                 bids.append((bid_ps[i], bid_v[i]))
+            
+            # TODO: Clear all the price-levels with zero volume in the last order book.
             
             books.add_slice(1000*t + time_period[0], asks, bids)
 
@@ -346,9 +350,9 @@ class TestFactory:
             raise Exception('No such instrument: {}'.format(pair))
         return filtered_instruments[0]
 
-    def produce(self, num_pairs: int = 3) -> TestCase:
+    def produce(self, num_pairs: int = 3, points: int = 100) -> TestCase:
         '''produce a test case'''
-        bt_period = self.genBackTestPeriod()
+        bt_period = self.genBackTestPeriod(point=points)
         pairs = self.genPairs(num_pairs, ['USDT-', 'USDC-'])
         insts = self.genInsts(bt_period, pairs)
         total_pairs = set([inst.pair for inst in insts])
@@ -367,7 +371,7 @@ class TestFactory:
         original_balance = self.genBalance(pairs)
         referredBalances = self.calBalanceHist(insts, original_balance)
 
-        return TestCase(books, insts, referredBalances)
+        return TestCase(bt_period, books, insts, referredBalances)
 
 
     def genPairs(self, num: Optional[int] = None, filters: List[str] = []) -> List[str]:
@@ -385,5 +389,5 @@ class TestFactory:
 
 if __name__ == '__main__':
     tf = TestFactory()
-    tc = tf.produce(1)
+    tc = tf.produce(1, 100)
     tc.to_files('./testcase.json')

@@ -73,11 +73,11 @@ def generate_random_valueInt(v0, deviation) -> int:
 
 def generate_order_seq(a0, step, count, minPs, is_increasing: bool = True) -> List[float]:
     '''
-    随机生成一串以a0为首项的递增或递减的随机数序列
+    随机生成一串以首项大于a0的递增或递减的随机数序列
     '''
     # TODO: 完善生成逻辑
     seq = [a0]
-    for _ in range(1, count):
+    for _ in range(1, count + 1):
         while True:
             if is_increasing:
                 # delta = max(0, random.normalvariate(step, step/3))
@@ -90,7 +90,7 @@ def generate_order_seq(a0, step, count, minPs, is_increasing: bool = True) -> Li
         a = seq[-1] + delta
         a = max(minPs, a)
         seq.append(a)
-    return seq
+    return seq[1:]
 
 def generate_random_seq(
                         mu: float, 
